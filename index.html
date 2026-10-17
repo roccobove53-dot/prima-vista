@@ -1,0 +1,1538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prima Vista</title>
+<meta name="description" content="Sight-reading practice for piano. Read the note, play it, and the app listens.">
+<meta name="theme-color" content="#E9EBEE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0C0D0F" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Prima Vista">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20180%20180%22%3E%20%3Crect%20width%3D%22180%22%20height%3D%22180%22%20fill%3D%22%23101114%22%2F%3E%20%3Cg%20stroke%3D%22%23E8E2D4%22%20stroke-width%3D%223.2%22%20stroke-linecap%3D%22butt%22%20opacity%3D%220.9%22%3E%20%3Cline%20x1%3D%220%22%20x2%3D%22180%22%20y1%3D%2246%22%20y2%3D%2246%22%2F%3E%3Cline%20x1%3D%220%22%20x2%3D%22180%22%20y1%3D%2268%22%20y2%3D%2268%22%2F%3E%3Cline%20x1%3D%220%22%20x2%3D%22180%22%20y1%3D%2290%22%20y2%3D%2290%22%2F%3E%3Cline%20x1%3D%220%22%20x2%3D%22180%22%20y1%3D%22112%22%20y2%3D%22112%22%2F%3E%3Cline%20x1%3D%220%22%20x2%3D%22180%22%20y1%3D%22134%22%20y2%3D%22134%22%2F%3E%20%3C%2Fg%3E%20%3Cpath%20fill%3D%22%23D9A94E%22%20fill-rule%3D%22evenodd%22%20d%3D%22M90%2068.5c19.5%200%2034%209.6%2034%2021.5S109.5%20111.5%2090%20111.5%2056%20101.9%2056%2090%2070.5%2068.5%2090%2068.5Z%20M80.6%2079.2c-3.4%204.9%201.2%2014.5%2010.3%2021.3%206.2%204.6%2012.4%205.9%2015.2%203.1%203.4-4.9-1.2-14.5-10.3-21.3-6.2-4.6-12.4-5.9-15.2-3.1Z%22%2F%3E%20%3C%2Fsvg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400;600&family=Atkinson+Hyperlegible+Next:wght@400;600;700&family=Bodoni+Moda:ital,opsz,wght@1,6..96,500;1,6..96,600&display=swap">
+<style>
+/* Music glyphs: a 6-glyph subset of Bravura (Steinberg, SIL Open Font License 1.1), renamed per the OFL. */
+@font-face { font-family: 'PrimaVista Glyphs'; src: url(data:font/woff2;base64,T1RUTwALAIAAAwAwQ0ZGIND1mzIAACXAAAAYzUdQT1NEdkx1AAA+kAAAACBHU1VCRHZMdQAAPrAAAAAgT1MvMk7fTgsAAAEgAAAAYGNtYXDEr7+YAAAlVAAAAExoZWFkL0/CoAAAALwAAAA2aGhlYQqE/r8AAAD0AAAAJGhtdHgK6//7AAA+0AAAABxtYXhwAAdQAAAAARgAAAAGbmFtZfYPa7EAAAGAAAAj1HBvc3T/uAAyAAAloAAAACAAAQAAAAF7ZAgzXJFfDzz1AAAD6AAAAADmm24zAAAAAOb4lm7/+/1uAqwESgAAAAYAAgAAAAAAAAABAAAH3PgkAAACrP/7AAACrAPoAAAAAAAAAAAAAAAAAAAABwAAUAAABwAAAAQBuAGQAAUAAAKKAlgAAABLAooCWAAAAV4AMgClAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAFNNVEcAQOBQ4mIH3PgkAAAH3AfcAAAAAQAAAAABEwHbAAAAIAAGAAAACQByAAMAAQQJAAAigAAAAAMAAQQJAAEAIiKAAAMAAQQJAAIADiKiAAMAAQQJAAMARCKwAAMAAQQJAAQAIiKAAAMAAQQJAAUAGiL0AAMAAQQJAAYAICMOAAMAAQQJAA0igAAAAAMAAQQJAA4ANCMuAEMAbwBwAHkAcgBpAGcAaAB0ACAAqQAgADIAMAAyADYALAAgAFMAdABlAGkAbgBiAGUAcgBnACAATQBlAGQAaQBhACAAVABlAGMAaABuAG8AbABvAGcAaQBlAHMAIABHAG0AYgBIACAAKABoAHQAdABwADoALwAvAHcAdwB3AC4AcwB0AGUAaQBuAGIAZQByAGcALgBuAGUAdAAvACkALAAgAHcAaQB0AGgAIABSAGUAcwBlAHIAdgBlAGQAIABGAG8AbgB0ACAATgBhAG0AZQAgACIAQgByAGEAdgB1AHIAYQAiAC4ACgAKAFQAaABpAHMAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAaQBzACAAbABpAGMAZQBuAHMAZQBkACAAdQBuAGQAZQByACAAdABoAGUAIABTAEkATAAgAE8AcABlAG4AIABGAG8AbgB0ACAATABpAGMAZQBuAHMAZQAsACAAVgBlAHIAcwBpAG8AbgAgADEALgAxAC4AIABUAGgAaQBzACAAbABpAGMAZQBuAHMAZQAgAGkAcwAgAGMAbwBwAGkAZQBkACAAYgBlAGwAbwB3ACwAIABhAG4AZAAgAGkAcwAgAGEAbABzAG8AIABhAHYAYQBpAGwAYQBiAGwAZQAgAHcAaQB0AGgAIABhACAARgBBAFEAIABhAHQAOgAgAGgAdAB0AHAAOgAvAC8AcwBjAHIAaQBwAHQAcwAuAHMAaQBsAC4AbwByAGcALwBPAEYATAAKAAoALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAAoAUwBJAEwAIABPAFAARQBOACAARgBPAE4AVAAgAEwASQBDAEUATgBTAEUAIABWAGUAcgBzAGkAbwBuACAAMQAuADEAIAAtACAAMgA2ACAARgBlAGIAcgB1AGEAcgB5ACAAMgAwADAANwAKAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAtAC0ALQAKAAoAUABSAEUAQQBNAEIATABFAAoAVABoAGUAIABnAG8AYQBsAHMAIABvAGYAIAB0AGgAZQAgAE8AcABlAG4AIABGAG8AbgB0ACAATABpAGMAZQBuAHMAZQAgACgATwBGAEwAKQAgAGEAcgBlACAAdABvACAAcwB0AGkAbQB1AGwAYQB0AGUAIAB3AG8AcgBsAGQAdwBpAGQAZQAgAGQAZQB2AGUAbABvAHAAbQBlAG4AdAAgAG8AZgAgAGMAbwBsAGwAYQBiAG8AcgBhAHQAaQB2AGUAIABmAG8AbgB0ACAAcAByAG8AagBlAGMAdABzACwAIAB0AG8AIABzAHUAcABwAG8AcgB0ACAAdABoAGUAIABmAG8AbgB0ACAAYwByAGUAYQB0AGkAbwBuACAAZQBmAGYAbwByAHQAcwAgAG8AZgAgAGEAYwBhAGQAZQBtAGkAYwAgAGEAbgBkACAAbABpAG4AZwB1AGkAcwB0AGkAYwAgAGMAbwBtAG0AdQBuAGkAdABpAGUAcwAsACAAYQBuAGQAIAB0AG8AIABwAHIAbwB2AGkAZABlACAAYQAgAGYAcgBlAGUAIABhAG4AZAAgAG8AcABlAG4AIABmAHIAYQBtAGUAdwBvAHIAawAgAGkAbgAgAHcAaABpAGMAaAAgAGYAbwBuAHQAcwAgAG0AYQB5ACAAYgBlACAAcwBoAGEAcgBlAGQAIABhAG4AZAAgAGkAbQBwAHIAbwB2AGUAZAAgAGkAbgAgAHAAYQByAHQAbgBlAHIAcwBoAGkAcAAgAHcAaQB0AGgAIABvAHQAaABlAHIAcwAuAAoACgBUAGgAZQAgAE8ARgBMACAAYQBsAGwAbwB3AHMAIAB0AGgAZQAgAGwAaQBjAGUAbgBzAGUAZAAgAGYAbwBuAHQAcwAgAHQAbwAgAGIAZQAgAHUAcwBlAGQALAAgAHMAdAB1AGQAaQBlAGQALAAgAG0AbwBkAGkAZgBpAGUAZAAgAGEAbgBkACAAcgBlAGQAaQBzAHQAcgBpAGIAdQB0AGUAZAAgAGYAcgBlAGUAbAB5ACAAYQBzACAAbABvAG4AZwAgAGEAcwAgAHQAaABlAHkAIABhAHIAZQAgAG4AbwB0ACAAcwBvAGwAZAAgAGIAeQAgAHQAaABlAG0AcwBlAGwAdgBlAHMALgAgAFQAaABlACAAZgBvAG4AdABzACwAIABpAG4AYwBsAHUAZABpAG4AZwAgAGEAbgB5ACAAZABlAHIAaQB2AGEAdABpAHYAZQAgAHcAbwByAGsAcwAsACAAYwBhAG4AIABiAGUAIABiAHUAbgBkAGwAZQBkACwAIABlAG0AYgBlAGQAZABlAGQALAAgAHIAZQBkAGkAcwB0AHIAaQBiAHUAdABlAGQAIABhAG4AZAAvAG8AcgAgAHMAbwBsAGQAIAB3AGkAdABoACAAYQBuAHkAIABzAG8AZgB0AHcAYQByAGUAIABwAHIAbwB2AGkAZABlAGQAIAB0AGgAYQB0ACAAYQBuAHkAIAByAGUAcwBlAHIAdgBlAGQAIABuAGEAbQBlAHMAIABhAHIAZQAgAG4AbwB0ACAAdQBzAGUAZAAgAGIAeQAgAGQAZQByAGkAdgBhAHQAaQB2AGUAIAB3AG8AcgBrAHMALgAgAFQAaABlACAAZgBvAG4AdABzACAAYQBuAGQAIABkAGUAcgBpAHYAYQB0AGkAdgBlAHMALAAgAGgAbwB3AGUAdgBlAHIALAAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcgBlAGwAZQBhAHMAZQBkACAAdQBuAGQAZQByACAAYQBuAHkAIABvAHQAaABlAHIAIAB0AHkAcABlACAAbwBmACAAbABpAGMAZQBuAHMAZQAuACAAVABoAGUAIAByAGUAcQB1AGkAcgBlAG0AZQBuAHQAIABmAG8AcgAgAGYAbwBuAHQAcwAgAHQAbwAgAHIAZQBtAGEAaQBuACAAdQBuAGQAZQByACAAdABoAGkAcwAgAGwAaQBjAGUAbgBzAGUAIABkAG8AZQBzACAAbgBvAHQAIABhAHAAcABsAHkAIAB0AG8AIABhAG4AeQAgAGQAbwBjAHUAbQBlAG4AdAAgAGMAcgBlAGEAdABlAGQAIAB1AHMAaQBuAGcAIAB0AGgAZQAgAGYAbwBuAHQAcwAgAG8AcgAgAHQAaABlAGkAcgAgAGQAZQByAGkAdgBhAHQAaQB2AGUAcwAuAAoACgBEAEUARgBJAE4ASQBUAEkATwBOAFMACgAiAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIgAgAHIAZQBmAGUAcgBzACAAdABvACAAdABoAGUAIABzAGUAdAAgAG8AZgAgAGYAaQBsAGUAcwAgAHIAZQBsAGUAYQBzAGUAZAAgAGIAeQAgAHQAaABlACAAQwBvAHAAeQByAGkAZwBoAHQAIABIAG8AbABkAGUAcgAoAHMAKQAgAHUAbgBkAGUAcgAgAHQAaABpAHMAIABsAGkAYwBlAG4AcwBlACAAYQBuAGQAIABjAGwAZQBhAHIAbAB5ACAAbQBhAHIAawBlAGQAIABhAHMAIABzAHUAYwBoAC4AIABUAGgAaQBzACAAbQBhAHkACgBpAG4AYwBsAHUAZABlACAAcwBvAHUAcgBjAGUAIABmAGkAbABlAHMALAAgAGIAdQBpAGwAZAAgAHMAYwByAGkAcAB0AHMAIABhAG4AZAAgAGQAbwBjAHUAbQBlAG4AdABhAHQAaQBvAG4ALgAKAAoAIgBSAGUAcwBlAHIAdgBlAGQAIABGAG8AbgB0ACAATgBhAG0AZQAiACAAcgBlAGYAZQByAHMAIAB0AG8AIABhAG4AeQAgAG4AYQBtAGUAcwAgAHMAcABlAGMAaQBmAGkAZQBkACAAYQBzACAAcwB1AGMAaAAgAGEAZgB0AGUAcgAgAHQAaABlACAAYwBvAHAAeQByAGkAZwBoAHQAIABzAHQAYQB0AGUAbQBlAG4AdAAoAHMAKQAuAAoACgAiAE8AcgBpAGcAaQBuAGEAbAAgAFYAZQByAHMAaQBvAG4AIgAgAHIAZQBmAGUAcgBzACAAdABvACAAdABoAGUAIABjAG8AbABsAGUAYwB0AGkAbwBuACAAbwBmACAARgBvAG4AdAAgAFMAbwBmAHQAdwBhAHIAZQAgAGMAbwBtAHAAbwBuAGUAbgB0AHMAIABhAHMAIABkAGkAcwB0AHIAaQBiAHUAdABlAGQAIABiAHkAIAB0AGgAZQAgAEMAbwBwAHkAcgBpAGcAaAB0ACAASABvAGwAZABlAHIAKABzACkALgAKAAoAIgBNAG8AZABpAGYAaQBlAGQAIABWAGUAcgBzAGkAbwBuACIAIAByAGUAZgBlAHIAcwAgAHQAbwAgAGEAbgB5ACAAZABlAHIAaQB2AGEAdABpAHYAZQAgAG0AYQBkAGUAIABiAHkAIABhAGQAZABpAG4AZwAgAHQAbwAsACAAZABlAGwAZQB0AGkAbgBnACwAIABvAHIAIABzAHUAYgBzAHQAaQB0AHUAdABpAG4AZwAgAC0ALQAgAGkAbgAgAHAAYQByAHQAIABvAHIAIABpAG4AIAB3AGgAbwBsAGUAIAAtAC0AIABhAG4AeQAgAG8AZgAgAHQAaABlACAAYwBvAG0AcABvAG4AZQBuAHQAcwAgAG8AZgAgAHQAaABlACAATwByAGkAZwBpAG4AYQBsACAAVgBlAHIAcwBpAG8AbgAsACAAYgB5ACAAYwBoAGEAbgBnAGkAbgBnACAAZgBvAHIAbQBhAHQAcwAgAG8AcgAgAGIAeQAgAHAAbwByAHQAaQBuAGcAIAB0AGgAZQAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIAB0AG8AIABhACAAbgBlAHcAIABlAG4AdgBpAHIAbwBuAG0AZQBuAHQALgAKAAoAIgBBAHUAdABoAG8AcgAiACAAcgBlAGYAZQByAHMAIAB0AG8AIABhAG4AeQAgAGQAZQBzAGkAZwBuAGUAcgAsACAAZQBuAGcAaQBuAGUAZQByACwAIABwAHIAbwBnAHIAYQBtAG0AZQByACwAIAB0AGUAYwBoAG4AaQBjAGEAbAAgAHcAcgBpAHQAZQByACAAbwByACAAbwB0AGgAZQByACAAcABlAHIAcwBvAG4AIAB3AGgAbwAgAGMAbwBuAHQAcgBpAGIAdQB0AGUAZAAgAHQAbwAgAHQAaABlACAARgBvAG4AdAAgAFMAbwBmAHQAdwBhAHIAZQAuAAoACgBQAEUAUgBNAEkAUwBTAEkATwBOACAAJgAgAEMATwBOAEQASQBUAEkATwBOAFMACgBQAGUAcgBtAGkAcwBzAGkAbwBuACAAaQBzACAAaABlAHIAZQBiAHkAIABnAHIAYQBuAHQAZQBkACwAIABmAHIAZQBlACAAbwBmACAAYwBoAGEAcgBnAGUALAAgAHQAbwAgAGEAbgB5ACAAcABlAHIAcwBvAG4AIABvAGIAdABhAGkAbgBpAG4AZwAgAGEAIABjAG8AcAB5ACAAbwBmACAAdABoAGUAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACwAIAB0AG8AIAB1AHMAZQAsACAAcwB0AHUAZAB5ACwAIABjAG8AcAB5ACwAIABtAGUAcgBnAGUALAAgAGUAbQBiAGUAZAAsACAAbQBvAGQAaQBmAHkALAAgAHIAZQBkAGkAcwB0AHIAaQBiAHUAdABlACwAIABhAG4AZAAgAHMAZQBsAGwAIABtAG8AZABpAGYAaQBlAGQAIABhAG4AZAAgAHUAbgBtAG8AZABpAGYAaQBlAGQAIABjAG8AcABpAGUAcwAgAG8AZgAgAHQAaABlACAARgBvAG4AdAAgAFMAbwBmAHQAdwBhAHIAZQAsACAAcwB1AGIAagBlAGMAdAAgAHQAbwAgAHQAaABlACAAZgBvAGwAbABvAHcAaQBuAGcAIABjAG8AbgBkAGkAdABpAG8AbgBzADoACgAKADEAKQAgAE4AZQBpAHQAaABlAHIAIAB0AGgAZQAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABuAG8AcgAgAGEAbgB5ACAAbwBmACAAaQB0AHMAIABpAG4AZABpAHYAaQBkAHUAYQBsACAAYwBvAG0AcABvAG4AZQBuAHQAcwAsACAAaQBuACAATwByAGkAZwBpAG4AYQBsACAAbwByACAATQBvAGQAaQBmAGkAZQBkACAAVgBlAHIAcwBpAG8AbgBzACwAIABtAGEAeQAgAGIAZQAgAHMAbwBsAGQAIABiAHkAIABpAHQAcwBlAGwAZgAuAAoACgAyACkAIABPAHIAaQBnAGkAbgBhAGwAIABvAHIAIABNAG8AZABpAGYAaQBlAGQAIABWAGUAcgBzAGkAbwBuAHMAIABvAGYAIAB0AGgAZQAgAEYAbwBuAHQAIABTAG8AZgB0AHcAYQByAGUAIABtAGEAeQAgAGIAZQAgAGIAdQBuAGQAbABlAGQALAAgAHIAZQBkAGkAcwB0AHIAaQBiAHUAdABlAGQAIABhAG4AZAAvAG8AcgAgAHMAbwBsAGQAIAB3AGkAdABoACAAYQBuAHkAIABzAG8AZgB0AHcAYQByAGUALAAgAHAAcgBvAHYAaQBkAGUAZAAgAHQAaABhAHQAIABlAGEAYwBoACAAYwBvAHAAeQAgAGMAbwBuAHQAYQBpAG4AcwAgAHQAaABlACAAYQBiAG8AdgBlACAAYwBvAHAAeQByAGkAZwBoAHQAIABuAG8AdABpAGMAZQAgAGEAbgBkACAAdABoAGkAcwAgAGwAaQBjAGUAbgBzAGUALgAgAFQAaABlAHMAZQAgAGMAYQBuACAAYgBlACAAaQBuAGMAbAB1AGQAZQBkACAAZQBpAHQAaABlAHIAIABhAHMAIABzAHQAYQBuAGQALQBhAGwAbwBuAGUAIAB0AGUAeAB0ACAAZgBpAGwAZQBzACwAIABoAHUAbQBhAG4ALQByAGUAYQBkAGEAYgBsAGUAIABoAGUAYQBkAGUAcgBzACAAbwByACAAaQBuACAAdABoAGUAIABhAHAAcAByAG8AcAByAGkAYQB0AGUAIABtAGEAYwBoAGkAbgBlAC0AcgBlAGEAZABhAGIAbABlACAAbQBlAHQAYQBkAGEAdABhACAAZgBpAGUAbABkAHMAIAB3AGkAdABoAGkAbgAgAHQAZQB4AHQAIABvAHIAIABiAGkAbgBhAHIAeQAgAGYAaQBsAGUAcwAgAGEAcwAgAGwAbwBuAGcAIABhAHMAIAB0AGgAbwBzAGUAIABmAGkAZQBsAGQAcwAgAGMAYQBuACAAYgBlACAAZQBhAHMAaQBsAHkAIAB2AGkAZQB3AGUAZAAgAGIAeQAgAHQAaABlACAAdQBzAGUAcgAuAAoACgAzACkAIABOAG8AIABNAG8AZABpAGYAaQBlAGQAIABWAGUAcgBzAGkAbwBuACAAbwBmACAAdABoAGUAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAbQBhAHkAIAB1AHMAZQAgAHQAaABlACAAUgBlAHMAZQByAHYAZQBkACAARgBvAG4AdAAgAE4AYQBtAGUAKABzACkAIAB1AG4AbABlAHMAcwAgAGUAeABwAGwAaQBjAGkAdAAgAHcAcgBpAHQAdABlAG4AIABwAGUAcgBtAGkAcwBzAGkAbwBuACAAaQBzACAAZwByAGEAbgB0AGUAZAAgAGIAeQAgAHQAaABlACAAYwBvAHIAcgBlAHMAcABvAG4AZABpAG4AZwAgAEMAbwBwAHkAcgBpAGcAaAB0ACAASABvAGwAZABlAHIALgAgAFQAaABpAHMAIAByAGUAcwB0AHIAaQBjAHQAaQBvAG4AIABvAG4AbAB5ACAAYQBwAHAAbABpAGUAcwAgAHQAbwAgAHQAaABlACAAcAByAGkAbQBhAHIAeQAgAGYAbwBuAHQAIABuAGEAbQBlACAAYQBzACAAcAByAGUAcwBlAG4AdABlAGQAIAB0AG8AIAB0AGgAZQAgAHUAcwBlAHIAcwAuAAoACgA0ACkAIABUAGgAZQAgAG4AYQBtAGUAKABzACkAIABvAGYAIAB0AGgAZQAgAEMAbwBwAHkAcgBpAGcAaAB0ACAASABvAGwAZABlAHIAKABzACkAIABvAHIAIAB0AGgAZQAgAEEAdQB0AGgAbwByACgAcwApACAAbwBmACAAdABoAGUAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACAAcwBoAGEAbABsACAAbgBvAHQAIABiAGUAIAB1AHMAZQBkACAAdABvACAAcAByAG8AbQBvAHQAZQAsACAAZQBuAGQAbwByAHMAZQAgAG8AcgAgAGEAZAB2AGUAcgB0AGkAcwBlACAAYQBuAHkAIABNAG8AZABpAGYAaQBlAGQAIABWAGUAcgBzAGkAbwBuACwAIABlAHgAYwBlAHAAdAAgAHQAbwAgAGEAYwBrAG4AbwB3AGwAZQBkAGcAZQAgAHQAaABlACAAYwBvAG4AdAByAGkAYgB1AHQAaQBvAG4AKABzACkAIABvAGYAIAB0AGgAZQAgAEMAbwBwAHkAcgBpAGcAaAB0ACAASABvAGwAZABlAHIAKABzACkAIABhAG4AZAAgAHQAaABlACAAQQB1AHQAaABvAHIAKABzACkAIABvAHIAIAB3AGkAdABoACAAdABoAGUAaQByACAAZQB4AHAAbABpAGMAaQB0ACAAdwByAGkAdAB0AGUAbgAgAHAAZQByAG0AaQBzAHMAaQBvAG4ALgAKAAoANQApACAAVABoAGUAIABGAG8AbgB0ACAAUwBvAGYAdAB3AGEAcgBlACwAIABtAG8AZABpAGYAaQBlAGQAIABvAHIAIAB1AG4AbQBvAGQAaQBmAGkAZQBkACwAIABpAG4AIABwAGEAcgB0ACAAbwByACAAaQBuACAAdwBoAG8AbABlACwAIABtAHUAcwB0ACAAYgBlACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAZQBuAHQAaQByAGUAbAB5ACAAdQBuAGQAZQByACAAdABoAGkAcwAgAGwAaQBjAGUAbgBzAGUALAAgAGEAbgBkACAAbQB1AHMAdAAgAG4AbwB0ACAAYgBlACAAZABpAHMAdAByAGkAYgB1AHQAZQBkACAAdQBuAGQAZQByACAAYQBuAHkAIABvAHQAaABlAHIAIABsAGkAYwBlAG4AcwBlAC4AIABUAGgAZQAgAHIAZQBxAHUAaQByAGUAbQBlAG4AdAAgAGYAbwByACAAZgBvAG4AdABzACAAdABvACAAcgBlAG0AYQBpAG4AIAB1AG4AZABlAHIAIAB0AGgAaQBzACAAbABpAGMAZQBuAHMAZQAgAGQAbwBlAHMAIABuAG8AdAAgAGEAcABwAGwAeQAgAHQAbwAgAGEAbgB5ACAAZABvAGMAdQBtAGUAbgB0ACAAYwByAGUAYQB0AGUAZAAgAHUAcwBpAG4AZwAgAHQAaABlACAARgBvAG4AdAAgAFMAbwBmAHQAdwBhAHIAZQAuAAoACgBUAEUAUgBNAEkATgBBAFQASQBPAE4ACgBUAGgAaQBzACAAbABpAGMAZQBuAHMAZQAgAGIAZQBjAG8AbQBlAHMAIABuAHUAbABsACAAYQBuAGQAIAB2AG8AaQBkACAAaQBmACAAYQBuAHkAIABvAGYAIAB0AGgAZQAgAGEAYgBvAHYAZQAgAGMAbwBuAGQAaQB0AGkAbwBuAHMAIABhAHIAZQAgAG4AbwB0ACAAbQBlAHQALgAKAAoARABJAFMAQwBMAEEASQBNAEUAUgAKAFQASABFACAARgBPAE4AVAAgAFMATwBGAFQAVwBBAFIARQAgAEkAUwAgAFAAUgBPAFYASQBEAEUARAAgACIAQQBTACAASQBTACIALAAgAFcASQBUAEgATwBVAFQAIABXAEEAUgBSAEEATgBUAFkAIABPAEYAIABBAE4AWQAgAEsASQBOAEQALAAgAEUAWABQAFIARQBTAFMAIABPAFIAIABJAE0AUABMAEkARQBEACwAIABJAE4AQwBMAFUARABJAE4ARwAgAEIAVQBUACAATgBPAFQAIABMAEkATQBJAFQARQBEACAAVABPACAAQQBOAFkAIABXAEEAUgBSAEEATgBUAEkARQBTACAATwBGACAATQBFAFIAQwBIAEEATgBUAEEAQgBJAEwASQBUAFkALAAgAEYASQBUAE4ARQBTAFMAIABGAE8AUgAgAEEAIABQAEEAUgBUAEkAQwBVAEwAQQBSACAAUABVAFIAUABPAFMARQAgAEEATgBEACAATgBPAE4ASQBOAEYAUgBJAE4ARwBFAE0ARQBOAFQAIABPAEYAIABDAE8AUABZAFIASQBHAEgAVAAsACAAUABBAFQARQBOAFQALAAgAFQAUgBBAEQARQBNAEEAUgBLACwAIABPAFIAIABPAFQASABFAFIAIABSAEkARwBIAFQALgAgAEkATgAgAE4ATwAgAEUAVgBFAE4AVAAgAFMASABBAEwATAAgAFQASABFACAAQwBPAFAAWQBSAEkARwBIAFQAIABIAE8ATABEAEUAUgAgAEIARQAgAEwASQBBAEIATABFACAARgBPAFIAIABBAE4AWQAgAEMATABBAEkATQAsACAARABBAE0AQQBHAEUAUwAgAE8AUgAgAE8AVABIAEUAUgAgAEwASQBBAEIASQBMAEkAVABZACwAIABJAE4AQwBMAFUARABJAE4ARwAgAEEATgBZACAARwBFAE4ARQBSAEEATAAsACAAUwBQAEUAQwBJAEEATAAsACAASQBOAEQASQBSAEUAQwBUACwAIABJAE4AQwBJAEQARQBOAFQAQQBMACwAIABPAFIAIABDAE8ATgBTAEUAUQBVAEUATgBUAEkAQQBMACAARABBAE0AQQBHAEUAUwAsACAAVwBIAEUAVABIAEUAUgAgAEkATgAgAEEATgAgAEEAQwBUAEkATwBOACAATwBGACAAQwBPAE4AVABSAEEAQwBUACwAIABUAE8AUgBUACAATwBSACAATwBUAEgARQBSAFcASQBTAEUALAAgAEEAUgBJAFMASQBOAEcAIABGAFIATwBNACwAIABPAFUAVAAgAE8ARgAgAFQASABFACAAVQBTAEUAIABPAFIAIABJAE4AQQBCAEkATABJAFQAWQAgAFQATwAgAFUAUwBFACAAVABIAEUAIABGAE8ATgBUACAAUwBPAEYAVABXAEEAUgBFACAATwBSACAARgBSAE8ATQAgAE8AVABIAEUAUgAgAEQARQBBAEwASQBOAEcAUwAgAEkATgAgAFQASABFACAARgBPAE4AVAAgAFMATwBGAFQAVwBBAFIARQAuAFAAcgBpAG0AYQBWAGkAcwB0AGEAIABHAGwAeQBwAGgAcwBSAGUAZwB1AGwAYQByAFAAcgBpAG0AYQBWAGkAcwB0AGEARwBsAHkAcABoAHMAIABzAHUAYgBzAGUAdAAgAG8AZgAgAEIAcgBhAHYAdQByAGEAVgBlAHIAcwBpAG8AbgAgADEALgA0ADgAMgBQAHIAaQBtAGEAVgBpAHMAdABhAEcAbAB5AHAAaABzAGgAdAB0AHAAOgAvAC8AcwBjAHIAaQBwAHQAcwAuAHMAaQBsAC4AbwByAGcALwBPAEYATAAAAAIAAAADAAAAFAADAAEAAAAUAAQAOAAAAAoACAACAALgUOBi4KLiYv//AADgUOBi4KLiYP//H7EfoB9hHaQAAQAAAAAAAAAAAAAAAwAAAAAAAP+1ADIAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAIAAQEBCEJyYXZ1cmEAAQEBLPghAPgiAfgjDAD4JAL4JAP4JQRADAOG/Sb5QPreBRwSLw+rHBitEhwSMxEACwIAAQAIAA8AFgAdACQAKwAwAKMRxhHNEdN1bmlFMDUwdW5pRTA2MnVuaUUwQTJ1bmlFMjYwdW5pRTI2MXVuaUUyNjIxLjQ4MkJyYXZ1cmEgaXMgYSByZWdpc3RlcmVkIHRyYWRlbWFyayBvZiBTdGVpbmJlcmcgTWVkaWEgVGVjaG5vbG9naWVzIEdtYkggaW4gdGhlIEV1cm9wZWFuIFVuaW9uIGFuZCBvdGhlciB0ZXJyaXRvcmllcy5Db3B5cmlnaHQgQ29weXJpZ2h0IDIwMjYsIFN0ZWluYmVyZyBNZWRpYSBUZWNobm9sb2dpZXMgR21iSCBodHRwOnd3dy5zdGVpbmJlcmcubmV0LCB3aXRoIFJlc2VydmVkIEZvbnQgTmFtZSAiQnJhdnVyYSIuCgpUaGlzIEZvbnQgU29mdHdhcmUgaXMgbGljZW5zZWQgdW5kZXIgdGhlIFNJTCBPcGVuIEZvbnQgTGljZW5zZSwgVmVyc2lvbiAxLjEuIFRoaXMgbGljZW5zZSBpcyBjb3BpZWQgYmVsb3csIGFuZCBpcyBhbHNvIGF2YWlsYWJsZSB3aXRoIGEgRkFRIGF0OiBodHRwOnNjcmlwdHMuc2lsLm9yZ09GTAoKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KU0lMIE9QRU4gRk9OVCBMSUNFTlNFIFZlcnNpb24gMS4xIC0gMjYgRmVicnVhcnkgMjAwNwotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKUFJFQU1CTEUKVGhlIGdvYWxzIG9mIHRoZSBPcGVuIEZvbnQgTGljZW5zZSBPRkwgYXJlIHRvIHN0aW11bGF0ZSB3b3JsZHdpZGUgZGV2ZWxvcG1lbnQgb2YgY29sbGFib3JhdGl2ZSBmb250IHByb2plY3RzLCB0byBzdXBwb3J0IHRoZSBmb250IGNyZWF0aW9uIGVmZm9ydHMgb2YgYWNhZGVtaWMgYW5kIGxpbmd1aXN0aWMgY29tbXVuaXRpZXMsIGFuZCB0byBwcm92aWRlIGEgZnJlZSBhbmQgb3BlbiBmcmFtZXdvcmsgaW4gd2hpY2ggZm9udHMgbWF5IGJlIHNoYXJlZCBhbmQgaW1wcm92ZWQgaW4gcGFydG5lcnNoaXAgd2l0aCBvdGhlcnMuCgpUaGUgT0ZMIGFsbG93cyB0aGUgbGljZW5zZWQgZm9udHMgdG8gYmUgdXNlZCwgc3R1ZGllZCwgbW9kaWZpZWQgYW5kIHJlZGlzdHJpYnV0ZWQgZnJlZWx5IGFzIGxvbmcgYXMgdGhleSBhcmUgbm90IHNvbGQgYnkgdGhlbXNlbHZlcy4gVGhlIGZvbnRzLCBpbmNsdWRpbmcgYW55IGRlcml2YXRpdmUgd29ya3MsIGNhbiBiZSBidW5kbGVkLCBlbWJlZGRlZCwgcmVkaXN0cmlidXRlZCBhbmRvciBzb2xkIHdpdGggYW55IHNvZnR3YXJlIHByb3ZpZGVkIHRoYXQgYW55IHJlc2VydmVkIG5hbWVzIGFyZSBub3QgdXNlZCBieSBkZXJpdmF0aXZlIHdvcmtzLiBUaGUgZm9udHMgYW5kIGRlcml2YXRpdmVzLCBob3dldmVyLCBjYW5ub3QgYmUgcmVsZWFzZWQgdW5kZXIgYW55IG90aGVyIHR5cGUgb2YgbGljZW5zZS4gVGhlIHJlcXVpcmVtZW50IGZvciBmb250cyB0byByZW1haW4gdW5kZXIgdGhpcyBsaWNlbnNlIGRvZXMgbm90IGFwcGx5IHRvIGFueSBkb2N1bWVudCBjcmVhdGVkIHVzaW5nIHRoZSBmb250cyBvciB0aGVpciBkZXJpdmF0aXZlcy4KCkRFRklOSVRJT05TCiJGb250IFNvZnR3YXJlIiByZWZlcnMgdG8gdGhlIHNldCBvZiBmaWxlcyByZWxlYXNlZCBieSB0aGUgQ29weXJpZ2h0IEhvbGRlcnMgdW5kZXIgdGhpcyBsaWNlbnNlIGFuZCBjbGVhcmx5IG1hcmtlZCBhcyBzdWNoLiBUaGlzIG1heQppbmNsdWRlIHNvdXJjZSBmaWxlcywgYnVpbGQgc2NyaXB0cyBhbmQgZG9jdW1lbnRhdGlvbi4KCiJSZXNlcnZlZCBGb250IE5hbWUiIHJlZmVycyB0byBhbnkgbmFtZXMgc3BlY2lmaWVkIGFzIHN1Y2ggYWZ0ZXIgdGhlIGNvcHlyaWdodCBzdGF0ZW1lbnRzLgoKIk9yaWdpbmFsIFZlcnNpb24iIHJlZmVycyB0byB0aGUgY29sbGVjdGlvbiBvZiBGb250IFNvZnR3YXJlIGNvbXBvbmVudHMgYXMgZGlzdHJpYnV0ZWQgYnkgdGhlIENvcHlyaWdodCBIb2xkZXJzLgoKIk1vZGlmaWVkIFZlcnNpb24iIHJlZmVycyB0byBhbnkgZGVyaXZhdGl2ZSBtYWRlIGJ5IGFkZGluZyB0bywgZGVsZXRpbmcsIG9yIHN1YnN0aXR1dGluZyAtLSBpbiBwYXJ0IG9yIGluIHdob2xlIC0tIGFueSBvZiB0aGUgY29tcG9uZW50cyBvZiB0aGUgT3JpZ2luYWwgVmVyc2lvbiwgYnkgY2hhbmdpbmcgZm9ybWF0cyBvciBieSBwb3J0aW5nIHRoZSBGb250IFNvZnR3YXJlIHRvIGEgbmV3IGVudmlyb25tZW50LgoKIkF1dGhvciIgcmVmZXJzIHRvIGFueSBkZXNpZ25lciwgZW5naW5lZXIsIHByb2dyYW1tZXIsIHRlY2huaWNhbCB3cml0ZXIgb3Igb3RoZXIgcGVyc29uIHdobyBjb250cmlidXRlZCB0byB0aGUgRm9udCBTb2Z0d2FyZS4KClBFUk1JU1NJT04gJiBDT05ESVRJT05TClBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHkgb2YgdGhlIEZvbnQgU29mdHdhcmUsIHRvIHVzZSwgc3R1ZHksIGNvcHksIG1lcmdlLCBlbWJlZCwgbW9kaWZ5LCByZWRpc3RyaWJ1dGUsIGFuZCBzZWxsIG1vZGlmaWVkIGFuZCB1bm1vZGlmaWVkIGNvcGllcyBvZiB0aGUgRm9udCBTb2Z0d2FyZSwgc3ViamVjdCB0byB0aGUgZm9sbG93aW5nIGNvbmRpdGlvbnM6CgoxIE5laXRoZXIgdGhlIEZvbnQgU29mdHdhcmUgbm9yIGFueSBvZiBpdHMgaW5kaXZpZHVhbCBjb21wb25lbnRzLCBpbiBPcmlnaW5hbCBvciBNb2RpZmllZCBWZXJzaW9ucywgbWF5IGJlIHNvbGQgYnkgaXRzZWxmLgoKMiBPcmlnaW5hbCBvciBNb2RpZmllZCBWZXJzaW9ucyBvZiB0aGUgRm9udCBTb2Z0d2FyZSBtYXkgYmUgYnVuZGxlZCwgcmVkaXN0cmlidXRlZCBhbmRvciBzb2xkIHdpdGggYW55IHNvZnR3YXJlLCBwcm92aWRlZCB0aGF0IGVhY2ggY29weSBjb250YWlucyB0aGUgYWJvdmUgY29weXJpZ2h0IG5vdGljZSBhbmQgdGhpcyBsaWNlbnNlLiBUaGVzZSBjYW4gYmUgaW5jbHVkZWQgZWl0aGVyIGFzIHN0YW5kLWFsb25lIHRleHQgZmlsZXMsIGh1bWFuLXJlYWRhYmxlIGhlYWRlcnMgb3IgaW4gdGhlIGFwcHJvcHJpYXRlIG1hY2hpbmUtcmVhZGFibGUgbWV0YWRhdGEgZmllbGRzIHdpdGhpbiB0ZXh0IG9yIGJpbmFyeSBmaWxlcyBhcyBsb25nIGFzIHRob3NlIGZpZWxkcyBjYW4gYmUgZWFzaWx5IHZpZXdlZCBieSB0aGUgdXNlci4KCjMgTm8gTW9kaWZpZWQgVmVyc2lvbiBvZiB0aGUgRm9udCBTb2Z0d2FyZSBtYXkgdXNlIHRoZSBSZXNlcnZlZCBGb250IE5hbWVzIHVubGVzcyBleHBsaWNpdCB3cml0dGVuIHBlcm1pc3Npb24gaXMgZ3JhbnRlZCBieSB0aGUgY29ycmVzcG9uZGluZyBDb3B5cmlnaHQgSG9sZGVyLiBUaGlzIHJlc3RyaWN0aW9uIG9ubHkgYXBwbGllcyB0byB0aGUgcHJpbWFyeSBmb250IG5hbWUgYXMgcHJlc2VudGVkIHRvIHRoZSB1c2Vycy4KCjQgVGhlIG5hbWVzIG9mIHRoZSBDb3B5cmlnaHQgSG9sZGVycyBvciB0aGUgQXV0aG9ycyBvZiB0aGUgRm9udCBTb2Z0d2FyZSBzaGFsbCBub3QgYmUgdXNlZCB0byBwcm9tb3RlLCBlbmRvcnNlIG9yIGFkdmVydGlzZSBhbnkgTW9kaWZpZWQgVmVyc2lvbiwgZXhjZXB0IHRvIGFja25vd2xlZGdlIHRoZSBjb250cmlidXRpb25zIG9mIHRoZSBDb3B5cmlnaHQgSG9sZGVycyBhbmQgdGhlIEF1dGhvcnMgb3Igd2l0aCB0aGVpciBleHBsaWNpdCB3cml0dGVuIHBlcm1pc3Npb24uCgo1IFRoZSBGb250IFNvZnR3YXJlLCBtb2RpZmllZCBvciB1bm1vZGlmaWVkLCBpbiBwYXJ0IG9yIGluIHdob2xlLCBtdXN0IGJlIGRpc3RyaWJ1dGVkIGVudGlyZWx5IHVuZGVyIHRoaXMgbGljZW5zZSwgYW5kIG11c3Qgbm90IGJlIGRpc3RyaWJ1dGVkIHVuZGVyIGFueSBvdGhlciBsaWNlbnNlLiBUaGUgcmVxdWlyZW1lbnQgZm9yIGZvbnRzIHRvIHJlbWFpbiB1bmRlciB0aGlzIGxpY2Vuc2UgZG9lcyBub3QgYXBwbHkgdG8gYW55IGRvY3VtZW50IGNyZWF0ZWQgdXNpbmcgdGhlIEZvbnQgU29mdHdhcmUuCgpURVJNSU5BVElPTgpUaGlzIGxpY2Vuc2UgYmVjb21lcyBudWxsIGFuZCB2b2lkIGlmIGFueSBvZiB0aGUgYWJvdmUgY29uZGl0aW9ucyBhcmUgbm90IG1ldC4KCkRJU0NMQUlNRVIKVEhFIEZPTlQgU09GVFdBUkUgSVMgUFJPVklERUQgIkFTIElTIiwgV0lUSE9VVCBXQVJSQU5UWSBPRiBBTlkgS0lORCwgRVhQUkVTUyBPUiBJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIEFOWSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSwgRklUTkVTUyBGT1IgQSBQQVJUSUNVTEFSIFBVUlBPU0UgQU5EIE5PTklORlJJTkdFTUVOVCBPRiBDT1BZUklHSFQsIFBBVEVOVCwgVFJBREVNQVJLLCBPUiBPVEhFUiBSSUdIVC4gSU4gTk8gRVZFTlQgU0hBTEwgVEhFIENPUFlSSUdIVCBIT0xERVIgQkUgTElBQkxFIEZPUiBBTlkgQ0xBSU0sIERBTUFHRVMgT1IgT1RIRVIgTElBQklMSVRZLCBJTkNMVURJTkcgQU5ZIEdFTkVSQUwsIFNQRUNJQUwsIElORElSRUNULCBJTkNJREVOVEFMLCBPUiBDT05TRVFVRU5USUFMIERBTUFHRVMsIFdIRVRIRVIgSU4gQU4gQUNUSU9OIE9GIENPTlRSQUNULCBUT1JUIE9SIE9USEVSV0lTRSwgQVJJU0lORyBGUk9NLCBPVVQgT0YgVEhFIFVTRSBPUiBJTkFCSUxJVFkgVE8gVVNFIFRIRSBGT05UIFNPRlRXQVJFIE9SIEZST00gT1RIRVIgREVBTElOR1MgSU4gVEhFIEZPTlQgU09GVFdBUkUuQnJhdnVyYU5vcm1hbAAAAQGHBQAHAgABAAMB4gLHA0YEAQS7Bmi3Dvfo/Sav+Aav99v3Ifsb9xv5R/cvEovbv/df+xrOo7hsqpTCsL9huHm3lrWc3RPMgvgM+DMViZeN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) format('woff2'); font-display: block; }
+
+/* Layout: one music-stand card owns the screen; status, actions and stats sit around its edges. */
+:root {
+  --stand: #E9EBEE;     /* page ground: the music stand */
+  --paper: #FFFFFF;     /* the card the notation sits on */
+  --ink: #15161A;       /* notation and primary text */
+  --ink-2: #5A5F68;     /* secondary text */
+  --rule: #D2D5DA;      /* hairlines and borders */
+  --well: #DFE2E6;      /* recessed controls */
+  --brass: #8A5B12;     /* accent: pedal brass */
+  --brass-fill: #F4EAD7;
+  --on-brass: #FFFFFF;
+  --ok: #17784A;  --ok-fill: #DDF1E5;
+  --bad: #B73329; --bad-fill: #FBE4E1;
+  --shadow: 0 1px 2px rgba(21, 22, 26, .06), 0 10px 28px rgba(21, 22, 26, .08);
+  --f-display: 'Bodoni Moda', 'Bodoni 72', Didot, 'Bodoni MT', Georgia, serif;
+  --f-ui: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --f-num: 'Atkinson Hyperlegible Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --f-music: 'PrimaVista Glyphs';
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --stand: #0C0D0F; --paper: #17191D; --ink: #ECE7DC; --ink-2: #9EA2AA; --rule: #2C2F35; --well: #0E0F12;
+    --brass: #D8A84D; --brass-fill: #2D2517; --on-brass: #17191D;
+    --ok: #4CC983; --ok-fill: #14301F; --bad: #F2685D; --bad-fill: #3A1A17;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 12px 32px rgba(0, 0, 0, .45);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --stand: #0C0D0F; --paper: #17191D; --ink: #ECE7DC; --ink-2: #9EA2AA; --rule: #2C2F35; --well: #0E0F12;
+  --brass: #D8A84D; --brass-fill: #2D2517; --on-brass: #17191D;
+  --ok: #4CC983; --ok-fill: #14301F; --bad: #F2685D; --bad-fill: #3A1A17;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 12px 32px rgba(0, 0, 0, .45);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--stand); color: var(--ink);
+  font-family: var(--f-ui); font-size: 16px; line-height: 1.4;
+  -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent;
+}
+button { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+
+.app {
+  height: 100%; min-height: 0;
+  display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px;
+  padding-top: max(10px, env(safe-area-inset-top, 0px));
+  padding-bottom: max(14px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  max-width: 760px; margin: 0 auto;
+}
+
+/* ---------- top bar */
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; flex-wrap: wrap; }
+.brand { font-family: var(--f-display); font-style: italic; font-weight: 600; font-size: 1.55rem; letter-spacing: .005em; line-height: 1; white-space: nowrap; }
+.brand b { color: var(--brass); font-weight: 600; }
+.bar-right { display: flex; align-items: center; gap: 8px; }
+.pill {
+  display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 12px 0 10px;
+  border-radius: 18px; border: 1px solid var(--rule); background: var(--paper);
+  font-size: .85rem; font-weight: 600; color: var(--ink-2); cursor: default; white-space: nowrap;
+}
+.pill[data-state="on"] { color: var(--ink); }
+.pill[data-state="paused"], .pill[data-state="error"] { cursor: pointer; color: var(--bad); border-color: var(--bad); }
+.meter { display: inline-flex; align-items: flex-end; gap: 2px; height: 14px; }
+.meter i { width: 3px; border-radius: 1px; background: var(--rule); transition: background-color .08s linear; }
+.meter i:nth-child(1) { height: 4px; } .meter i:nth-child(2) { height: 6px; } .meter i:nth-child(3) { height: 9px; }
+.meter i:nth-child(4) { height: 11px; } .meter i:nth-child(5) { height: 14px; }
+.meter i.lit { background: var(--brass); }
+.icon-btn {
+  width: 40px; height: 40px; display: grid; place-items: center; border-radius: 20px;
+  border: 1px solid var(--rule); background: var(--paper); cursor: pointer; padding: 0;
+}
+.icon-btn svg { width: 20px; height: 20px; }
+
+/* ---------- the card */
+.card {
+  min-height: 0; display: flex; flex-direction: column; gap: 4px;
+  background: var(--paper); border: 1px solid var(--rule); border-radius: 16px;
+  box-shadow: var(--shadow); padding: 12px 12px 16px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.card[data-state="ok"] { border-color: var(--ok); box-shadow: 0 0 0 4px var(--ok-fill), var(--shadow); }
+.card[data-state="bad"] { border-color: var(--bad); box-shadow: 0 0 0 4px var(--bad-fill), var(--shadow); }
+.card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 30px; }
+.mode {
+  border: 0; background: none; padding: 4px 2px; cursor: pointer; text-align: left;
+  font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2);
+}
+.mode span { color: var(--brass); }
+.misses { display: inline-flex; gap: 5px; }
+.misses i { width: 8px; height: 8px; border-radius: 50%; background: var(--bad); }
+.card-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+.staff { display: grid; place-items: center; min-height: 0; }
+.staff svg { display: block; width: 100%; height: auto; max-height: 46vh; overflow: visible; }
+.staff .line { stroke: var(--ink); stroke-width: 1.35; }
+.staff .ledger { stroke: var(--ink); stroke-width: 1.9; transition: stroke .2s ease; }
+.staff .g { font-family: var(--f-music); font-size: 40px; fill: var(--ink); transition: fill .2s ease; }
+.staff .head.ok, .staff .acc.ok { fill: var(--ok); }
+.staff .head.bad, .staff .acc.bad { fill: var(--bad); }
+.staff .ledger.ok { stroke: var(--ok); }
+.staff .name { font-family: var(--f-num); font-size: 9.5px; font-weight: 600; fill: var(--brass); }
+.chord.enter { animation: enter .28s cubic-bezier(.2, .7, .3, 1) both; }
+@keyframes enter { from { opacity: 0; transform: translateX(6px); } to { opacity: 1; transform: none; } }
+
+.feedback { text-align: center; min-height: 3.1em; display: grid; align-content: center; gap: 2px; padding: 0 8px; }
+.fb-main { font-size: 1.3rem; font-weight: 700; line-height: 1.2; text-wrap: balance; }
+.fb-sub { font-size: .95rem; color: var(--ink-2); text-wrap: balance; }
+.card[data-state="ok"] .fb-main { color: var(--ok); }
+.card[data-state="bad"] .fb-main { color: var(--bad); }
+
+/* ---------- actions + stats */
+.side { display: grid; gap: 12px; align-content: start; }
+.actions { display: grid; grid-template-columns: 1fr auto auto; gap: 8px; }
+.btn {
+  height: 48px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--rule);
+  background: var(--paper); font-weight: 600; cursor: pointer; white-space: nowrap;
+}
+.btn.primary { background: var(--brass); border-color: var(--brass); color: var(--on-brass); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: default; }
+:where(button, input, [tabindex]):focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.stats { margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--rule); padding-top: 10px; }
+.stats div { display: grid; gap: 1px; padding: 0 4px; border-left: 1px solid var(--rule); }
+.stats div:first-child { border-left: 0; padding-left: 0; }
+.stats dt { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
+.stats dd { margin: 0; font-family: var(--f-num); font-size: 1.15rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.note { margin: 0; font-size: .82rem; color: var(--ink-2); }
+.note.err { color: var(--bad); font-weight: 600; }
+
+/* phone on its side, on the music stand */
+@media (orientation: landscape) and (max-height: 560px) {
+  .app { max-width: none; grid-template-columns: minmax(0, 1fr) minmax(310px, 40%); grid-template-rows: auto minmax(0, 1fr); column-gap: 16px; }
+  .bar { grid-column: 2; grid-row: 1; min-width: 0; }
+  .brand { font-size: 1.3rem; }
+  .card { grid-column: 1; grid-row: 1 / span 2; }
+  .side { grid-column: 2; grid-row: 2; }
+  .actions { grid-template-columns: 1fr 1fr; }
+  .actions .primary { grid-column: 1 / -1; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 10px; }
+  .stats div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .card-body { gap: 6px; }
+  .staff svg { max-height: calc(100dvh - 190px); }
+}
+
+/* ---------- settings sheet */
+dialog.sheet {
+  width: min(560px, 100%); max-height: min(92dvh, 760px); margin: auto auto 0; padding: 0;
+  border: 1px solid var(--rule); border-radius: 18px 18px 0 0; background: var(--paper); color: var(--ink);
+  box-shadow: var(--shadow); overflow: auto;
+}
+@media (min-width: 600px) and (min-height: 600px) { dialog.sheet { margin: auto; border-radius: 18px; } }
+dialog.sheet::backdrop { background: rgba(8, 9, 11, .45); }
+.sheet-in {
+  display: grid; gap: 18px; padding-top: 16px;
+  padding-bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px));
+}
+.sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.sheet-head h2 { margin: 0; font-family: var(--f-display); font-style: italic; font-weight: 600; font-size: 1.4rem; }
+.group { display: grid; gap: 7px; }
+.group > .label { font-size: .72rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-2); }
+.seg { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 3px; padding: 3px; border-radius: 11px; background: var(--well); }
+.seg label { position: relative; display: block; cursor: pointer; }
+.seg input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.seg span { display: grid; place-items: center; min-height: 40px; padding: 4px 6px; border-radius: 8px; text-align: center; font-size: .9rem; font-weight: 600; color: var(--ink-2); line-height: 1.15; }
+.seg small { display: block; font-size: .7rem; font-weight: 600; opacity: .8; }
+.seg input:checked + span { background: var(--paper); color: var(--ink); box-shadow: 0 1px 2px rgba(0, 0, 0, .14); }
+.seg input:focus-visible + span { outline: 2px solid var(--brass); outline-offset: 1px; }
+.check { display: flex; gap: 10px; align-items: center; font-weight: 600; cursor: pointer; }
+.check input { width: 22px; height: 22px; accent-color: var(--brass); margin: 0; }
+.facts { display: grid; gap: 10px; border-top: 1px solid var(--rule); padding-top: 14px; font-size: .9rem; }
+.fact { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.fact b { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.fact .btn { height: 38px; padding: 0 12px; font-size: .85rem; }
+.fine { margin: 0; font-size: .78rem; color: var(--ink-2); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="bar">
+    <div class="brand">Prima <b>Vista</b></div>
+    <div class="bar-right">
+      <span class="pill" id="pill" data-state="off" role="status">
+        <span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span id="pillText">Mic off</span>
+      </span>
+      <button class="icon-btn" id="btnSettings" type="button" aria-label="Practice settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="card" id="card" data-state="idle">
+    <div class="card-head">
+      <button class="mode" id="mode" type="button" aria-label="Change practice settings"></button>
+      <span class="misses" id="misses" aria-label=""></span>
+    </div>
+    <div class="card-body">
+      <div class="staff" id="staff" role="img" aria-label="Staff"></div>
+      <div class="feedback" aria-live="polite">
+        <span class="fb-main" id="fbMain">Play what you see</span>
+        <span class="fb-sub" id="fbSub">Tap Start listening, then play this on your piano.</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="side">
+    <div class="actions">
+      <button class="btn primary" id="btnListen" type="button">Start listening</button>
+      <button class="btn" id="btnNames" type="button">Show names</button>
+      <button class="btn" id="btnSkip" type="button">Skip</button>
+    </div>
+    <dl class="stats">
+      <div><dt>Streak</dt><dd id="stStreak">0</dd></div>
+      <div><dt>First try</dt><dd id="stFirst">–</dd></div>
+      <div><dt>Avg time</dt><dd id="stTime">–</dd></div>
+      <div><dt>Best</dt><dd id="stBest">0</dd></div>
+    </dl>
+    <p class="note" id="note">Listening uses your microphone. Sound is analyzed on this device and is never recorded or uploaded.</p>
+  </div>
+</div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-in">
+    <div class="sheet-head">
+      <h2 id="sheetTitle">Practice settings</h2>
+      <button class="btn" id="btnDone" type="button">Done</button>
+    </div>
+    <div class="group">
+      <span class="label" id="lClef">Clef</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lClef">
+        <label><input type="radio" name="clef" id="clef-treble" value="treble"><span>Treble</span></label>
+        <label><input type="radio" name="clef" id="clef-bass" value="bass"><span>Bass</span></label>
+        <label><input type="radio" name="clef" id="clef-both" value="both"><span>Both</span></label>
+      </div>
+    </div>
+    <div class="group">
+      <span class="label" id="lSize">Notes at once</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lSize">
+        <label><input type="radio" name="size" id="size-1" value="1"><span>1<small>Single</small></span></label>
+        <label><input type="radio" name="size" id="size-2" value="2"><span>2<small>Intervals</small></span></label>
+        <label><input type="radio" name="size" id="size-3" value="3"><span>3<small>Triads</small></span></label>
+        <label><input type="radio" name="size" id="size-4" value="4"><span>4<small>7th chords</small></span></label>
+      </div>
+    </div>
+    <div class="group">
+      <span class="label" id="lRange">Range</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lRange">
+        <label><input type="radio" name="ledger" id="ledger-0" value="0"><span>On the staff</span></label>
+        <label><input type="radio" name="ledger" id="ledger-1" value="1"><span>With ledger lines</span></label>
+      </div>
+    </div>
+    <div class="group">
+      <span class="label" id="lAcc">Accidentals</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lAcc">
+        <label><input type="radio" name="acc" id="acc-0" value="0"><span>None</span></label>
+        <label><input type="radio" name="acc" id="acc-1" value="1"><span>Sharps &amp; flats</span></label>
+      </div>
+    </div>
+    <div class="group" id="inputGroup">
+      <span class="label" id="lInput">Listen with</span>
+      <div class="seg" role="radiogroup" aria-labelledby="lInput">
+        <label><input type="radio" name="input" id="input-mic" value="mic"><span>Microphone</span></label>
+        <label><input type="radio" name="input" id="input-midi" value="midi"><span>MIDI keyboard</span></label>
+      </div>
+      <p class="fine" id="midiFine">MIDI works in Chrome on Android or a computer, with a digital piano connected by USB.</p>
+    </div>
+    <label class="check"><input type="checkbox" id="optHints"> Show note names after two misses</label>
+    <div class="facts">
+      <div class="fact"><span>Your piano's tuning</span><b id="tuneOut">Not measured yet</b></div>
+      <div class="fact"><span>Best streak <b id="bestOut">0</b></span><button class="btn" id="btnReset" type="button">Reset stats</button></div>
+      <p class="fine">Tuning is learned from the notes you play correctly, so an older piano that sits a little sharp or flat is still recognized.</p>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* PitchCore — target-aware polyphonic piano pitch detection.
+   Same file runs in Node (tests) and in the browser (the app). */
+(function (root) {
+  'use strict';
+
+  const DEFAULTS = {
+    windowSize: 16384,   // analysis window (samples)
+    pad: 2,              // zero padding factor
+    fmax: 6000,
+    alpha: 27, beta: 320,// harmonic weights g = (f0+a)/(n f0+b)
+    nu: 0.33,            // whitening compression
+    whitenFloor: 0.02,   // relative floor for band rms (limits noise boost)
+    gridStep: 0.1,       // semitones
+    tolBase: 8,          // cents
+    tolInharm: 1.0,      // fraction of predicted stretch added to tolerance
+    trackTolInit: 22, trackTolFit: 12, trackTolGrow: 0.35,
+    tolMax: 45,
+    minBins: 1.5,
+    hMaxLow: 20, hMaxMid: 16, hMaxHigh: 12,
+    maxPoly: 6,
+    theta: 0.30,         // stop when salience < theta * first salience
+    coveragePow: 1.0,    // penalty for missing low harmonics
+    coverageN: 8,
+    refRho: 0.75,        // reference (pre-onset) spectrum subtraction
+    localMeanBins: 0,    // subtract local mean (0 = off)
+    peakRel: 0.04,       // peaks below this fraction of max are ignored
+    psiE: 0.10,          // min exclusive presence of each target (rel. to loudest note)
+    oerMin: 0.14,        // min odd-harmonic share (else it's really an octave higher)
+    phi: 0.25,           // max leftover (unexplained) note salience
+    tonExtra: 0.17,      // leftovers must be steady sinusoids (piano), not gliding speech
+    tonTarget: 0.13,
+    promMin: 8,          // a note's strongest partial must stand this far above the spectral floor
+    bgRho: 1.5,          // learned background (hum, fans) subtraction
+    extraMax: 3,
+  };
+
+  function midiToFreq(m) { return 440 * Math.pow(2, (m - 69) / 12); }
+
+  // Rough piano inharmonicity model (B coefficient by key).
+  function inharmB(m) {
+    const lg = m < 60 ? Math.max(-4.5, -3.7 + 0.029 * (m - 60)) : -3.7 + 0.044 * (m - 60);
+    return Math.pow(10, lg);
+  }
+
+  function makeFFT(n) {
+    const levels = Math.round(Math.log2(n));
+    const cos = new Float64Array(n / 2), sin = new Float64Array(n / 2);
+    for (let i = 0; i < n / 2; i++) { cos[i] = Math.cos(2 * Math.PI * i / n); sin[i] = Math.sin(2 * Math.PI * i / n); }
+    const rev = new Uint32Array(n);
+    for (let i = 0; i < n; i++) { let x = i, r = 0; for (let j = 0; j < levels; j++) { r = (r << 1) | (x & 1); x >>>= 1; } rev[i] = r; }
+    return function (re, im) {
+      for (let i = 0; i < n; i++) { const j = rev[i]; if (j > i) { let t = re[i]; re[i] = re[j]; re[j] = t; t = im[i]; im[i] = im[j]; im[j] = t; } }
+      for (let size = 2; size <= n; size <<= 1) {
+        const half = size >> 1, step = n / size;
+        for (let i = 0; i < n; i += size) {
+          for (let j = i, k = 0; j < i + half; j++, k += step) {
+            const l = j + half;
+            const tre = re[l] * cos[k] + im[l] * sin[k];
+            const tim = -re[l] * sin[k] + im[l] * cos[k];
+            re[l] = re[j] - tre; im[l] = im[j] - tim;
+            re[j] += tre; im[j] += tim;
+          }
+        }
+      }
+    };
+  }
+
+  function createAnalyzer(userOpts) {
+    const o = Object.assign({}, DEFAULTS, userOpts || {});
+    const fs = o.sampleRate;
+    const N = o.windowSize, NF = N * o.pad, nb = NF / 2 + 1, df = fs / NF;
+    const fft = makeFFT(NF);
+    const win = new Float32Array(N);
+    let wsum = 0;
+    for (let i = 0; i < N; i++) { win[i] = 0.5 - 0.5 * Math.cos(2 * Math.PI * i / (N - 1)); wsum += win[i]; }
+    const scale = 2 / wsum;
+    const re = new Float64Array(NF), im = new Float64Array(NF);
+    const fmax = Math.min(o.fmax, fs / 2 - 200);
+    const kmax = Math.min(nb - 1, Math.ceil(fmax * 1.06 / df) + 8);
+
+    // --- whitening bands (Klapuri 2006)
+    const centers = [];
+    for (let b = 0; ; b++) { const c = 229 * (Math.pow(10, (b + 1) / 21.4) - 1); centers.push(c); if (c > fmax * 1.1) break; }
+    const nbands = centers.length;
+    const bandLo = [], bandHi = [];
+    for (let b = 0; b < nbands; b++) {
+      bandLo.push(b === 0 ? 0 : centers[b - 1]);
+      bandHi.push(b === nbands - 1 ? centers[b] * 1.3 : centers[b + 1]);
+    }
+    const gamma = new Float32Array(kmax + 1);
+
+    // --- candidate grid
+    const minMidi = o.minMidi, maxMidi = o.maxMidi;
+    const gridP = [];
+    for (let p = minMidi - 0.5; p <= maxMidi + 0.5 + 1e-9; p += o.gridStep) gridP.push(p);
+    const G = gridP.length;
+    const hStart = new Int32Array(G + 1);
+    const kLo = [], kHi = [], wt = [], hnum = [];
+    for (let i = 0; i < G; i++) {
+      hStart[i] = kLo.length;
+      const p = gridP[i], f0 = midiToFreq(p), B = inharmB(p);
+      const hMax = f0 >= 250 ? o.hMaxHigh : f0 >= 120 ? o.hMaxMid : o.hMaxLow;
+      for (let n = 1; n <= hMax; n++) {
+        const stretch = Math.sqrt(1 + B * n * n);
+        const f = n * f0 * stretch;
+        if (f > fmax) break;
+        const stretchCents = 1200 * Math.log2(stretch);
+        const tol = Math.min(o.tolMax, o.tolBase + o.tolInharm * stretchCents);
+        const r = Math.pow(2, tol / 1200);
+        const kc = f / df;
+        let lo = Math.floor(f / r / df), hi = Math.ceil(f * r / df);
+        lo = Math.min(lo, Math.floor(kc - o.minBins)); hi = Math.max(hi, Math.ceil(kc + o.minBins));
+        lo = Math.max(1, lo); hi = Math.min(kmax - 1, hi);
+        kLo.push(lo); kHi.push(hi);
+        wt.push((f0 + o.alpha) / (n * f0 + o.beta));
+        hnum.push(n);
+      }
+    }
+    hStart[G] = kLo.length;
+    const KLo = Int32Array.from(kLo), KHi = Int32Array.from(kHi), WT = Float32Array.from(wt), HN = Int32Array.from(hnum);
+    const kernel = [];
+    // Hann main lobe sampled at 1/pad bin spacing
+    for (let d = 0; d <= 2 * o.pad; d++) {
+      const x = d / o.pad; // in unpadded bins
+      kernel.push(hannLobe(x));
+    }
+    function hannLobe(x) {
+      if (x === 0) return 1;
+      if (Math.abs(x - 1) < 1e-9) return 0.5;
+      // Hann spectrum magnitude ~ |sinc(x) / (1 - x^2)|
+      const s = Math.sin(Math.PI * x) / (Math.PI * x);
+      return Math.abs(s / (1 - x * x));
+    }
+
+    const R = new Float32Array(kmax + 1);
+    const P = new Float32Array(kmax + 1);
+    const sal = new Float32Array(G);
+
+    // magnitude spectrum of samples buf[end-N .. end)
+    function spectrum(buf, end, out) {
+      const start = end - N;
+      for (let i = 0; i < N; i++) { const j = start + i; re[i] = (j >= 0 ? buf[j] : 0) * win[i]; im[i] = 0; }
+      for (let i = N; i < NF; i++) { re[i] = 0; im[i] = 0; }
+      fft(re, im);
+      out = out || new Float32Array(kmax + 1);
+      for (let k = 0; k <= kmax; k++) out[k] = Math.sqrt(re[k] * re[k] + im[k] * im[k]) * scale;
+      return out;
+    }
+
+    function whiten(X, Y) {
+      // band rms
+      const sig = new Float32Array(nbands);
+      let smax = 0;
+      for (let b = 0; b < nbands; b++) {
+        const c = centers[b], lo = bandLo[b], hi = bandHi[b];
+        const k0 = Math.max(1, Math.floor(lo / df)), k1 = Math.min(kmax, Math.ceil(hi / df));
+        let s = 0, w = 0;
+        for (let k = k0; k <= k1; k++) {
+          const f = k * df;
+          const h = f <= c ? (f - lo) / (c - lo) : (hi - f) / (hi - c);
+          if (h <= 0) continue;
+          s += h * X[k] * X[k]; w += h;
+        }
+        sig[b] = w > 0 ? Math.sqrt(s / w) : 0;
+        if (sig[b] > smax) smax = sig[b];
+      }
+      const floor = smax * o.whitenFloor + 1e-12;
+      const gb = new Float32Array(nbands);
+      for (let b = 0; b < nbands; b++) gb[b] = Math.pow(Math.max(sig[b], floor), o.nu - 1);
+      let b = 0;
+      for (let k = 0; k <= kmax; k++) {
+        const f = k * df;
+        while (b < nbands - 1 && centers[b + 1] < f) b++;
+        let g;
+        if (f <= centers[0]) g = gb[0];
+        else if (b >= nbands - 1) g = gb[nbands - 1];
+        else { const t = (f - centers[b]) / (centers[b + 1] - centers[b]); g = gb[b] * (1 - t) + gb[b + 1] * t; }
+        Y[k] = X[k] * g;
+      }
+      if (o.localMeanBins > 0) {
+        const W = o.localMeanBins, tmp = Float32Array.from(Y);
+        let acc = 0, cnt = 0;
+        for (let k = 0; k <= Math.min(kmax, W); k++) { acc += tmp[k]; cnt++; }
+        for (let k = 0; k <= kmax; k++) {
+          const add = k + W + 1, rem = k - W;
+          Y[k] = Math.max(0, tmp[k] - acc / cnt);
+          if (add <= kmax) { acc += tmp[add]; cnt++; }
+          if (rem >= 0) { acc -= tmp[rem]; cnt--; }
+        }
+      }
+      return Y;
+    }
+
+    let peakThr = 0;
+    function setPeakThreshold(Y) { let m = 0; for (let k = 1; k < kmax; k++) if (Y[k] > m) m = Y[k]; peakThr = m * o.peakRel; }
+    function peaksOf(Rs, Ps) {
+      Ps[0] = 0; Ps[kmax] = 0;
+      for (let k = 1; k < kmax; k++) Ps[k] = (Rs[k] > peakThr && Rs[k] >= Rs[k - 1] && Rs[k] >= Rs[k + 1]) ? Rs[k] : 0;
+    }
+
+    // range-max sparse table over the peak spectrum (O(1) window queries)
+    let maxW = 1;
+    for (let h = 0; h < KLo.length; h++) maxW = Math.max(maxW, KHi[h] - KLo[h] + 1);
+    const LV = Math.ceil(Math.log2(maxW)) + 1;
+    const ST = []; for (let j = 0; j < LV; j++) ST.push(new Float32Array(kmax + 1));
+    const LOG2 = new Uint8Array(maxW + 2); for (let w = 2; w <= maxW + 1; w++) LOG2[w] = LOG2[w >> 1] + 1;
+    function buildST(Ps) {
+      ST[0].set(Ps);
+      for (let j = 1; j < LV; j++) {
+        const a = ST[j - 1], b = ST[j], s = 1 << (j - 1);
+        for (let k = 0; k <= kmax; k++) b[k] = (k + s <= kmax && a[k + s] > a[k]) ? a[k + s] : a[k];
+      }
+    }
+    function rmax(lo, hi) { const j = LOG2[hi - lo + 1]; const a = ST[j][lo], b = ST[j][hi - (1 << j) + 1]; return a > b ? a : b; }
+    const MP = new Int32Array(kmax + 2);
+    function buildMaskPrefix(mask) { MP[0] = 0; for (let k = 0; k <= kmax; k++) MP[k + 1] = MP[k] + mask[k]; }
+
+    function salienceAll(Ps, out) {
+      buildST(Ps);
+      const cn = o.coverageN, cp = o.coveragePow;
+      for (let i = 0; i < G; i++) {
+        let s = 0, present = 0, considered = 0;
+        for (let h = hStart[i]; h < hStart[i + 1]; h++) {
+          const m = rmax(KLo[h], KHi[h]);
+          s += WT[h] * m;
+          if (HN[h] <= cn) { considered++; if (m > 0) present++; }
+        }
+        if (cp > 0 && considered > 0) s *= Math.pow(present / considered, cp);
+        out[i] = s;
+      }
+    }
+
+    function salienceMasked(Ps, mask, out) {
+      buildST(Ps); buildMaskPrefix(mask);
+      const cn = o.coverageN, cp = o.coveragePow;
+      for (let i = 0; i < G; i++) {
+        let s = 0, present = 0, considered = 0;
+        for (let h = hStart[i]; h < hStart[i + 1]; h++) {
+          if (MP[KHi[h] + 1] - MP[KLo[h]] > 0) continue;
+          const m = rmax(KLo[h], KHi[h]);
+          s += WT[h] * m;
+          if (HN[h] <= cn) { considered++; if (m > 0) present++; }
+        }
+        if (cp > 0 && considered > 0) s *= Math.pow(present / considered, cp);
+        out[i] = considered >= 2 ? s : 0;
+      }
+    }
+
+    function cancel(Rs, Ps, i) {
+      const h0 = hStart[i], h1 = hStart[i + 1];
+      const amps = [], bins = [];
+      for (let h = h0; h < h1; h++) {
+        let m = 0, kb = -1;
+        for (let k = KLo[h]; k <= KHi[h]; k++) if (Ps[k] > m) { m = Ps[k]; kb = k; }
+        amps.push(m); bins.push(kb);
+      }
+      const L = kernel.length - 1;
+      for (let j = 0; j < amps.length; j++) {
+        if (bins[j] < 0) continue;
+        let est = amps[j];
+        if (j > 0) {
+          let s = amps[j], c = 1;
+          if (amps[j - 1] > 0) { s += amps[j - 1]; c++; }
+          if (j + 1 < amps.length && amps[j + 1] > 0) { s += amps[j + 1]; c++; }
+          est = Math.min(est, s / c);
+        }
+        const kb = bins[j];
+        for (let d = -L; d <= L; d++) {
+          const k = kb + d; if (k < 0 || k > kmax) continue;
+          Rs[k] = Math.max(0, Rs[k] - est * kernel[Math.abs(d)] * (Rs[k] > 0 ? 1 : 0));
+        }
+        Rs[kb] = Math.min(Rs[kb], Math.max(0, amps[j] - est));
+      }
+    }
+
+
+    // Follow the actual overtone series of a note (refitting f0 and stretch B as we go).
+    function trackPartials(Rs, pitch) {
+      let f0 = midiToFreq(pitch), B = inharmB(pitch);
+      const pts = [];
+      const fitN = [], fitY = [];
+      let miss = 0;
+      for (let n = 1; n <= 80; n++) {
+        const pred = n * f0 * Math.sqrt(1 + B * n * n);
+        if (pred > fmax) break;
+        const stretchC = 1200 * Math.log2(Math.sqrt(1 + B * n * n));
+        const tolC = (pts.length >= 3 ? o.trackTolFit : o.trackTolInit) + o.trackTolGrow * stretchC;
+        const r = Math.pow(2, tolC / 1200), kc = pred / df;
+        let lo = Math.floor(Math.min(pred / r / df, kc - o.minBins)), hi = Math.ceil(Math.max(pred * r / df, kc + o.minBins));
+        lo = Math.max(1, lo); hi = Math.min(kmax - 1, hi);
+        let kb = -1, a = 0;
+        for (let k = lo; k <= hi; k++) if (Rs[k] > peakThr * 0.5 && Rs[k] >= Rs[k - 1] && Rs[k] >= Rs[k + 1] && Rs[k] > a) { a = Rs[k]; kb = k; }
+        if (kb < 0) { if (++miss > 6 && n > 12) break; continue; }
+        miss = 0;
+        // parabolic interpolation (log)
+        const y0 = Math.log(Rs[kb - 1] + 1e-12), y1 = Math.log(Rs[kb] + 1e-12), y2 = Math.log(Rs[kb + 1] + 1e-12);
+        const den = y0 - 2 * y1 + y2;
+        const fk = (kb + (den !== 0 ? 0.5 * (y0 - y2) / den : 0)) * df;
+        pts.push({ n, k: kb, a, f: fk });
+        fitN.push(n); fitY.push((fk / n) * (fk / n));
+        if (fitN.length >= 3) {
+          // least squares y = c0 + c1 n^2
+          let s0 = 0, s1 = 0, s2 = 0, t0 = 0, t1 = 0;
+          for (let i = 0; i < fitN.length; i++) { const x = fitN[i] * fitN[i], w = 1; s0 += w; s1 += w * x; s2 += w * x * x; t0 += w * fitY[i]; t1 += w * x * fitY[i]; }
+          const det = s0 * s2 - s1 * s1;
+          let c0, c1;
+          if (Math.abs(det) > 1e-9 && fitN.length >= 4) { c0 = (t0 * s2 - s1 * t1) / det; c1 = (s0 * t1 - s1 * t0) / det; }
+          else { c0 = t0 / s0; c1 = c0 * B; }
+          if (c0 > 0) {
+            let Bn = c1 / c0;
+            Bn = Math.min(0.01, Math.max(0, Bn));
+            const f0n = Math.sqrt(c0);
+            if (Math.abs(1200 * Math.log2(f0n / f0)) < 40) { f0 = f0n; B = Bn; }
+          }
+        }
+      }
+      return { pts, f0, B };
+    }
+
+    // Median of the whitened spectrum in 80 Hz - 5 kHz: the noise floor peaks are compared against
+    const kF0 = Math.max(1, Math.round(80 / df)), kF1 = Math.min(kmax, Math.round(5000 / df));
+    const medBuf = new Float32Array(kF1 - kF0 + 1);
+    function spectralFloor(Ys) {
+      medBuf.set(Ys.subarray(kF0, kF1 + 1));
+      const a = medBuf, k = a.length >> 1;
+      let lo = 0, hi = a.length - 1;
+      while (lo < hi) { // quickselect
+        const piv = a[(lo + hi) >> 1]; let i = lo, j = hi;
+        while (i <= j) { while (a[i] < piv) i++; while (a[j] > piv) j--; if (i <= j) { const t = a[i]; a[i] = a[j]; a[j] = t; i++; j--; } }
+        if (k <= j) hi = j; else if (k >= i) lo = i; else break;
+      }
+      return a[k] + 1e-12;
+    }
+    function prominence(pts, floor) { let m = 0; if (pts) for (const p of pts) if (p.a > m) m = p.a; return m / floor; }
+
+    // How sinusoid-like the strongest partials are (piano: steady peaks; speech: smeared glides)
+    function tonality(Ys, pts) {
+      if (!pts || !pts.length) return 0;
+      const W = 6 * o.pad;
+      const top = pts.slice().sort((a, b) => b.a - a.a).slice(0, 4);
+      let num = 0, den = 0;
+      for (const p of top) {
+        const k = p.k; let s = 0;
+        for (let j = Math.max(1, k - W); j <= Math.min(kmax - 1, k + W); j++) s += Ys[j] * Ys[j];
+        const c = s > 0 ? (Ys[k] * Ys[k]) / s : 0;
+        num += c * p.a; den += p.a;
+      }
+      return den > 0 ? num / den : 0;
+    }
+
+    function removePeaks(Rs, pts, mask) {
+      const W = 3 * o.pad + 2;
+      for (const p of pts) {
+        const kb = p.k;
+        let l = kb, r = kb;
+        while (l > 1 && kb - l < W && Rs[l - 1] < Rs[l]) l--;
+        while (r < kmax - 1 && r - kb < W && Rs[r + 1] < Rs[r]) r++;
+        for (let k = l; k <= r; k++) { Rs[k] = 0; if (mask) mask[k] = 1; }
+      }
+    }
+
+    // Multi-pitch estimation on whitened spectrum Y.
+    function detect(Y, opt) {
+      const maxPoly = (opt && opt.maxPoly) || o.maxPoly;
+      const theta = (opt && opt.theta != null) ? opt.theta : o.theta;
+      const tune = (opt && opt.tune) || 0; // semitones offset
+      R.set(Y);
+      setPeakThreshold(Y);
+      const found = [];
+      const used = new Set();
+      let s1 = 0;
+      for (let it = 0; it < maxPoly; it++) {
+        peaksOf(R, P);
+        salienceAll(P, sal);
+        // best per midi
+        let bestI = -1, bestS = 0, bestM = 0;
+        for (let i = 0; i < G; i++) {
+          const m = Math.round(gridP[i] - tune);
+          if (m < minMidi || m > maxMidi || used.has(m)) continue;
+          if (sal[i] > bestS) { bestS = sal[i]; bestI = i; bestM = m; }
+        }
+        if (bestI < 0 || bestS <= 0) break;
+        if (it === 0) s1 = bestS;
+        else if (bestS < theta * s1) break;
+        found.push({ midi: bestM, sal: bestS, rel: bestS / s1, pitch: gridP[bestI] });
+        used.add(bestM);
+        cancel(R, P, bestI);
+      }
+      return found;
+    }
+
+    // Salience of specific MIDI notes on a (residual) spectrum, for target checks.
+    function noteSalience(Y, midis, tune) {
+      peaksOf(Y, P);
+      salienceAll(P, sal);
+      const out = {};
+      for (const m of midis) {
+        let best = 0;
+        for (let i = 0; i < G; i++) { if (Math.round(gridP[i] - (tune || 0)) === m && sal[i] > best) best = sal[i]; }
+        out[m] = best;
+      }
+      return out;
+    }
+
+
+    function bestPerMidi(salArr, tune) {
+      const nm = maxMidi - minMidi + 1;
+      const s = new Float32Array(nm), gi = new Int32Array(nm).fill(-1);
+      for (let i = 0; i < G; i++) {
+        const m = Math.round(gridP[i] - tune) - minMidi;
+        if (m < 0 || m >= nm) continue;
+        if (salArr[i] > s[m]) { s[m] = salArr[i]; gi[m] = i; }
+      }
+      return { s, gi };
+    }
+
+    // Is exactly `targets` being played?  Returns evidence features; caller decides.
+    const mask = new Uint8Array(kmax + 1);
+    const R2 = new Float32Array(kmax + 1);
+    function evaluate(Y, targets, opt) {
+      const tune = (opt && opt.tune) || 0;
+      const floor = spectralFloor(Y);
+      R.set(Y);
+      setPeakThreshold(Y);
+      peaksOf(R, P); salienceAll(P, sal);
+      const full = bestPerMidi(sal, tune);
+      let sBest = 0, bestMidi = -1;
+      for (let m = 0; m < full.s.length; m++) if (full.s[m] > sBest) { sBest = full.s[m]; bestMidi = m + minMidi; }
+      const inR = t => t >= minMidi && t <= maxMidi;
+      const sT = targets.map(t => inR(t) ? full.s[t - minMidi] : 0);
+      // 1) track + remove targets, strongest first
+      const order = targets.map((t, i) => [t, sT[i]]).sort((a, b) => b[1] - a[1]);
+      const tracks = {};
+      mask.fill(0);
+      for (const [t] of order) {
+        if (!inR(t)) continue;
+        peaksOf(R, P); salienceAll(P, sal);
+        const bp = bestPerMidi(sal, tune);
+        const gi = bp.gi[t - minMidi];
+        if (gi >= 0 && bp.s[t - minMidi] > 0) {
+          const tr = trackPartials(R, gridP[gi]);
+          tr.gi = gi;
+          // odd/even balance of the first harmonics
+          let odd = 0, even = 0;
+          for (const p of tr.pts) { if (p.n <= 10) { if (p.n % 2) odd += p.a; else even += p.a; } }
+          tr.oer = (odd + even) > 0 ? odd / (odd + even) : 0;
+          tr.ton = tonality(Y, tr.pts);
+          tr.prom = prominence(tr.pts, floor);
+          tracks[t] = tr;
+          removePeaks(R, tr.pts, mask);
+        }
+      }
+      // 2) exclusive presence: salience of t with the OTHER targets' partials removed
+      const pE = [];
+      for (const t of targets) {
+        if (!inR(t)) { pE.push(0); continue; }
+        R2.set(Y);
+        for (const u of targets) if (u !== t && tracks[u]) removePeaks(R2, tracks[u].pts, null);
+        peaksOf(R2, P); salienceAll(P, sal);
+        const bp = bestPerMidi(sal, tune);
+        pE.push(sBest > 0 ? bp.s[t - minMidi] / sBest : 0);
+      }
+      // 3) what is left once all targets are explained (masked coverage)?
+      const extras = [];
+      const skip = new Set(targets);
+      for (let it = 0; it < o.extraMax; it++) {
+        peaksOf(R, P); salienceMasked(P, mask, sal);
+        const bp = bestPerMidi(sal, tune);
+        let bs = 0, bm = -1;
+        for (let m = 0; m < bp.s.length; m++) { const mm = m + minMidi; if (skip.has(mm)) continue; if (bp.s[m] > bs) { bs = bp.s[m]; bm = m; } }
+        if (bm < 0 || bs <= 0) break;
+        const tr = trackPartials(R, gridP[bp.gi[bm]]);
+        extras.push({ midi: bm + minMidi, rel: sBest > 0 ? bs / sBest : 0, ton: tonality(Y, tr.pts), prom: prominence(tr.pts, floor) });
+        skip.add(bm + minMidi);
+        removePeaks(R, tr.pts, mask);
+      }
+      const oer = targets.map(t => tracks[t] ? tracks[t].oer : 0);
+      const ton = targets.map(t => tracks[t] ? tracks[t].ton : 0);
+      const prom = targets.map(t => tracks[t] ? tracks[t].prom : 0);
+      const pitch = targets.map(t => tracks[t] && tracks[t].f0 ? 69 + 12 * Math.log2(tracks[t].f0 / 440) : null);
+      return { sT, sBest, bestMidi, pT: sT.map(s => sBest > 0 ? s / sBest : 0), pE, oer, ton, prom, extras, tracks, pitch, floor };
+    }
+
+    // Turn evidence into a verdict + what was missing/extra.
+    function decide(ev, targets) {
+      const missing = [], extra = [];
+      targets.forEach((t, i) => { if (ev.pE[i] < o.psiE || ev.oer[i] < o.oerMin || ev.ton[i] < o.tonTarget || ev.prom[i] < o.promMin) missing.push(t); });
+      for (const e of ev.extras) if (e.rel >= o.phi && e.ton >= o.tonExtra && e.prom >= o.promMin) extra.push(e.midi);
+      return { match: missing.length === 0 && extra.length === 0, missing, extra, unclear: missing.length === targets.length && extra.length === 0 };
+    }
+
+    function analyze(buf, end, refEnd, bg) {
+      const X = spectrum(buf, end);
+      if (refEnd != null && o.refRho > 0) {
+        const Xr = spectrum(buf, refEnd);
+        for (let k = 0; k <= kmax; k++) X[k] = Math.max(0, X[k] - o.refRho * Xr[k]);
+      }
+      if (bg) for (let k = 0; k <= kmax; k++) X[k] = Math.max(0, X[k] - o.bgRho * bg[k]);
+      const Y = whiten(X, new Float32Array(kmax + 1));
+      return { X, Y };
+    }
+
+    return { opts: o, N, df, kmax, spectrum, whiten, detect, evaluate, decide, analyze, noteSalience, gridP };
+  }
+
+
+  // Weighted median of learned tuning offsets near `midi` (semitones).
+  function tuneFromHist(hist, midi) {
+    if (!hist || !hist.length) return 0;
+    const arr = hist.map(([m, d]) => [d, Math.exp(-Math.abs(m - midi) / 12)]).sort((a, b) => a[0] - b[0]);
+    let tot = 0; for (const a of arr) tot += a[1];
+    let acc = 0; for (const a of arr) { acc += a[1]; if (acc >= tot / 2) return Math.max(-0.45, Math.min(0.45, a[0])); }
+    return 0;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Real-time judge: onset detection + multi-frame verdicts + tuning tracking.
+  // Feed it the most recent audio (buf, ending at time `now` in seconds).
+  function createJudge(userOpts) {
+    const o = Object.assign({
+      minMidi: 28, maxMidi: 96,
+      evalDelay: 0.25, evalEvery: 0.04, maxListen: 1.4,
+      acceptFrames: 2, rejectFrames: 4, rejectMin: 0.5,
+      gateMin: 0.00015, gateMul: 3.0,
+      fluxThr: 0.06, fluxRel: 2.5, fluxAdd: 0.03, riseRatio: 1.8, minIOI: 0.1, fadeDb: -32,
+    }, userOpts || {});
+    const fs = o.sampleRate;
+    const an = createAnalyzer(Object.assign({}, o.analyzer || {}, { sampleRate: fs, minMidi: o.minMidi, maxMidi: o.maxMidi }));
+    const BN = 1024, HOP = 512, hopT = HOP / fs;
+    const offt = makeFFT(BN), ore = new Float64Array(BN), oim = new Float64Array(BN);
+    const owin = new Float32Array(BN); for (let i = 0; i < BN; i++) owin[i] = 0.5 - 0.5 * Math.cos(2 * Math.PI * i / (BN - 1));
+    const k0 = Math.max(1, Math.floor(80 * BN / fs)), k1 = Math.min(BN / 2 - 1, Math.ceil(6000 * BN / fs));
+    let prevLog = null;
+    let noise = 0.001, lastBlockEnd = -1;
+    const smooth = [], nHist = [];
+    const eHist = []; // [t, e]
+    const S = {
+      target: null, phase: 'idle', onsetT: -1, lastOnsetT: -10, preLevel: 0,
+      lastEval: -1, matchStreak: 0, mis: [], tuneHist: [], level: 0, lastEv: null,
+    };
+
+    function setTarget(notes) {
+      S.target = notes.slice().sort((a, b) => a - b);
+      S.phase = 'idle'; S.matchStreak = 0; S.mis = []; S.lastEv = null;
+    }
+    function pause() { S.phase = 'paused'; }
+
+    function tuneFor(midi) { return tuneFromHist(S.tuneHist, midi); }
+
+    const wss = (() => { let s = 0; for (let i = 0; i < BN; i++) s += owin[i] * owin[i]; return Math.sqrt(s); })();
+    function blockAt(buf, endIdx) {
+      let e = 0;
+      for (let i = 0; i < BN; i++) { const v = buf[endIdx - BN + i] || 0; e += v * v; ore[i] = v * owin[i]; oim[i] = 0; }
+      offt(ore, oim);
+      const lg = new Float32Array(k1 - k0 + 1);
+      const mu = Math.max(noise, o.gateMin * 0.3) * wss * 3; // ~3x noise magnitude per bin
+      for (let k = k0; k <= k1; k++) lg[k - k0] = Math.log(1 + Math.sqrt(ore[k] * ore[k] + oim[k] * oim[k]) / mu);
+      return { e: Math.sqrt(e / BN), lg };
+    }
+    const logHist = []; // previous log spectra (for lag-2 SuperFlux)
+    const fluxHist = []; // [t, flux]
+
+    function detectOnsets(buf, now) {
+      let found = -1;
+      const start = Math.max(lastBlockEnd + hopT * 0.5, now - 0.25);
+      const nBlocks = Math.max(0, Math.floor((now - start) / hopT));
+      for (let j = nBlocks; j >= 0; j--) {
+        const t = now - j * hopT;
+        if (t <= lastBlockEnd + 1e-6) continue;
+        const endIdx = buf.length - Math.round((now - t) * fs);
+        if (endIdx - BN < 0) continue;
+        const { e, lg } = blockAt(buf, endIdx);
+        let flux = 0;
+        const ref = logHist.length >= 2 ? logHist[logHist.length - 2] : null;
+        if (ref) {
+          const n = lg.length;
+          for (let k = 0; k < n; k++) {
+            let m = ref[k]; if (k > 0 && ref[k - 1] > m) m = ref[k - 1]; if (k + 1 < n && ref[k + 1] > m) m = ref[k + 1];
+            const d = lg[k] - m; if (d > 0) flux += d;
+          }
+          flux /= n;
+        }
+        logHist.push(lg); if (logHist.length > 3) logHist.shift();
+        // noise floor: minimum of ~85 ms smoothed energy over the last ~5 s (digital silence ignored)
+        if (e > 1e-7) {
+          smooth.push(e); if (smooth.length > 8) smooth.shift();
+          const se = smooth.reduce((a, b) => a + b, 0) / smooth.length;
+          nHist.push([t, se]); while (nHist.length && t - nHist[0][0] > 5) nHist.shift();
+          let mn = Infinity; for (const h of nHist) if (h[1] < mn) mn = h[1];
+          noise = Math.max(2e-6, mn);
+        }
+        const gate = Math.max(o.gateMin, noise * o.gateMul);
+        // adaptive threshold from recent flux
+        let fm = 0, fc = 0; for (const [ht, hf] of fluxHist) if (t - ht < 0.35 && t - ht > 0.015) { fm += hf; fc++; }
+        fm = fc ? fm / fc : 0;
+        fluxHist.push([t, flux]); while (fluxHist.length && t - fluxHist[0][0] > 0.5) fluxHist.shift();
+        let eMin = Infinity; for (const [ht, he] of eHist) if (t - ht > 0.02 && t - ht < 0.15) eMin = Math.min(eMin, he);
+        eHist.push([t, e]); while (eHist.length && t - eHist[0][0] > 0.4) eHist.shift();
+        const thr = Math.max(o.fluxThr, fm * o.fluxRel + o.fluxAdd);
+        const rise = eMin < Infinity && e > o.riseRatio * eMin && e > gate * 2;
+        const sinceOn = t - S.lastOnsetT;
+        if (e > gate && nHist.length > 10 && ((flux > thr && sinceOn > o.minIOI) || (rise && sinceOn > 0.3))) {
+          S.lastOnsetT = t; found = t;
+          S.preLevel = eMin < Infinity ? eMin : 0;
+          S.peakLevel = e;
+          S.lastFlux = flux; S.lastThr = thr;
+        }
+        if (e > (S.peakLevel || 0)) S.peakLevel = e;
+        S.flux = flux; S.thr = thr;
+        lastBlockEnd = t;
+        S.level = e; S.gate = gate;
+      }
+      return found;
+    }
+
+    function learnTuning(ev, T) {
+      T.forEach((t, i) => { const p = ev.pitch[i]; if (p != null && Math.abs(p - t) < 0.5) S.tuneHist.push([t, p - t]); });
+      while (S.tuneHist.length > 16) S.tuneHist.shift();
+    }
+    function summarizeWrong() {
+      const cntM = {}, cntE = {};
+      const last = S.mis.slice(-4);
+      for (const x of last) { x.missing.forEach(m => cntM[m] = (cntM[m] || 0) + 1); x.extra.forEach(m => cntE[m] = (cntE[m] || 0) + 1); }
+      const half = last.length / 2;
+      return { type: 'wrong', missing: Object.keys(cntM).filter(k => cntM[k] >= half).map(Number), extra: Object.keys(cntE).filter(k => cntE[k] >= half).map(Number) };
+    }
+    // background spectrum (steady hum, fans) learned while nothing is being played
+    let bg = null, bgN = 0, lastBg = -1;
+    function learnBackground(buf, now) {
+      if (now - lastBg < 0.5 || now - S.lastOnsetT < 2.5 || S.phase === 'listen') return;
+      if (!(S.level < noise * 2.2)) return;
+      lastBg = now;
+      const X = an.spectrum(buf, buf.length);
+      if (!bg) { bg = Float32Array.from(X); bgN = 1; return; }
+      const a = bgN < 6 ? 1 / (++bgN) : 0.15;
+      for (let k = 0; k < bg.length; k++) bg[k] += a * (X[k] - bg[k]);
+    }
+    function idxAt(buf, now, t) { return buf.length - Math.round((now - t) * fs); }
+
+    // returns {level, gate, onset, event?, ev?}
+    function process(buf, now) {
+      const onset = detectOnsets(buf, now);
+      learnBackground(buf, now);
+      const out = { level: S.level, gate: S.gate, onset: onset >= 0 };
+      if (!S.target || S.phase === 'paused') return out;
+      if (onset >= 0) { S.phase = 'listen'; S.onsetT = onset; S.lastEval = -1; S.matchStreak = 0; S.mis = []; }
+      if (S.phase !== 'listen') return out;
+      const dt = now - S.onsetT;
+      if (dt < o.evalDelay || now - S.lastEval < o.evalEvery) return out;
+      const faded = S.level < (S.gate || o.gateMin) * 0.6 || S.level < (S.peakLevel || 0) * Math.pow(10, o.fadeDb / 20);
+      if (faded) {
+        // sound is gone: decide from what we saw while it was sounding
+        S.phase = 'idle';
+        if (S.matchStreak >= 1) { S.phase = 'done'; if (S.lastMatchEv) learnTuning(S.lastMatchEv, S.target); out.event = { type: 'correct', notes: S.target.slice() }; return out; }
+        if (S.mis.length >= 2) { out.event = summarizeWrong(); return out; }
+        return out;
+      }
+      S.lastEval = now;
+      const T = S.target;
+      const mean = T.reduce((a, b) => a + b, 0) / T.length;
+      const tune = tuneFor(mean);
+      const end = buf.length;
+      const A = an.analyze(buf, end, null, bgN >= 2 ? bg : null);
+      let ev = an.evaluate(A.Y, T, { tune });
+      let d = an.decide(ev, T);
+      const gate = S.gate || o.gateMin;
+      if (!d.match && S.preLevel > gate * 0.8) {
+        const refEnd = idxAt(buf, now, S.onsetT - 0.01);
+        if (refEnd - an.N >= 0) {
+          const B = an.analyze(buf, end, refEnd, bgN >= 2 ? bg : null);
+          const ev1 = an.evaluate(B.Y, T, { tune });
+          const d1 = an.decide(ev1, T);
+          if (d1.match || d1.missing.length + d1.extra.length < d.missing.length + d.extra.length) { ev = ev1; d = d1; }
+        }
+      }
+      S.lastEv = ev; out.ev = ev; out.verdict = d;
+      if (d.match) {
+        S.matchStreak++;
+        S.lastMatchEv = ev;
+        if (S.matchStreak >= o.acceptFrames) {
+          learnTuning(ev, T);
+          S.phase = 'done';
+          out.event = { type: 'correct', notes: T.slice() };
+        }
+        return out;
+      }
+      S.matchStreak = 0;
+      if (d.unclear) { if (dt > o.maxListen) S.phase = 'idle'; return out; } // nothing piano-like: don't count it
+      S.mis.push(d);
+      const n = S.mis.length;
+      if ((n >= o.rejectFrames && dt >= o.rejectMin) || (dt > o.maxListen && n >= 2)) {
+        S.phase = 'idle';
+        out.event = summarizeWrong();
+        return out;
+      }
+      if (dt > o.maxListen) S.phase = 'idle';
+      return out;
+    }
+
+    return { setTarget, process, pause, state: S, analyzer: an, tuneFor };
+  }
+
+  const api = { createAnalyzer, createJudge, tuneFromHist, midiToFreq, inharmB, makeFFT, DEFAULTS };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.PitchCore = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+/* Theory — spelled notes, clefs and flash-card generation. */
+(function (root) {
+  'use strict';
+  const LETTERS = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+  const NAT = [0, 2, 4, 5, 7, 9, 11];
+  const CLEF_BASE = { treble: 30, bass: 18 };      // diatonic number of the bottom line (E4 / G2)
+  const RANGE = { staff: [-1, 9], ledger: [-4, 12] }; // staff positions (0 = bottom line, 8 = top line)
+  const TRIADS = { maj: [0, 4, 7], min: [0, 3, 7], dim: [0, 3, 6], aug: [0, 4, 8] };
+  const TRIAD_W = [['maj', 0.42], ['min', 0.42], ['dim', 0.12], ['aug', 0.04]];
+  const SEVENTHS = { maj7: [0, 4, 7, 11], dom7: [0, 4, 7, 10], min7: [0, 3, 7, 10], hdim7: [0, 3, 6, 10], dim7: [0, 3, 6, 9] };
+  const SEVENTH_W = [['maj7', 0.22], ['dom7', 0.3], ['min7', 0.26], ['hdim7', 0.14], ['dim7', 0.08]];
+
+  function rng(seed) {
+    let a = seed >>> 0;
+    return function () { a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
+  }
+  const pickW = (list, r) => { let x = r() * list.reduce((s, e) => s + e[1], 0); for (const [k, w] of list) { if ((x -= w) <= 0) return k; } return list[list.length - 1][0]; };
+  const randInt = (lo, hi, r) => lo + Math.floor(r() * (hi - lo + 1));
+
+  function fromDiat(d, acc) { return { letter: LETTERS[((d % 7) + 7) % 7], octave: Math.floor(d / 7), acc: acc || 0, d }; }
+  function midiOf(n) { return 12 * (n.octave + 1) + NAT[LETTERS.indexOf(n.letter)] + n.acc; }
+  // E#, B#, Cb, Fb and doubles are legal but rare; keep the drill on everyday spellings
+  function okSpelling(n) {
+    if (Math.abs(n.acc) > 1) return false;
+    if (n.acc === 1 && (n.letter === 'E' || n.letter === 'B')) return false;
+    if (n.acc === -1 && (n.letter === 'C' || n.letter === 'F')) return false;
+    return true;
+  }
+  function name(n) { return n.letter + (n.acc > 0 ? '♯' : n.acc < 0 ? '♭' : '') + n.octave; }
+  function midiName(m, preferFlats) {
+    const sh = ['C', 'C♯', 'D', 'D♯', 'E', 'F', 'F♯', 'G', 'G♯', 'A', 'A♯', 'B'];
+    const fl = ['C', 'D♭', 'D', 'E♭', 'E', 'F', 'G♭', 'G', 'A♭', 'A', 'B♭', 'B'];
+    return (preferFlats ? fl : sh)[((m % 12) + 12) % 12] + (Math.floor(m / 12) - 1);
+  }
+
+  function randomAcc(n, accOn, prob, r) {
+    if (!accOn || r() >= prob) return n;
+    n.acc = r() < 0.5 ? 1 : -1;
+    if (!okSpelling(n)) n.acc = -n.acc;
+    if (!okSpelling(n)) n.acc = 0;
+    return n;
+  }
+
+  function generate(size, lo, hi, accOn, r) {
+    if (size === 1) return [randomAcc(fromDiat(randInt(lo, hi, r), 0), accOn, 0.4, r)];
+    if (size === 2) {
+      const k = randInt(1, 6, r); // 2nd .. 7th (octaves can't be verified by ear-detection)
+      if (hi - lo < k) return null;
+      const d1 = randInt(lo, hi - k, r);
+      return [randomAcc(fromDiat(d1, 0), accOn, 0.3, r), randomAcc(fromDiat(d1 + k, 0), accOn, 0.3, r)];
+    }
+    const shape = size === 3 ? [0, 2, 4] : [0, 2, 4, 6];
+    const table = size === 3 ? TRIADS : SEVENTHS;
+    const li = randInt(0, 6, r);
+    let rootAcc = 0, qual = null;
+    if (accOn) { rootAcc = [-1, 0, 0, 1][randInt(0, 3, r)]; qual = pickW(size === 3 ? TRIAD_W : SEVENTH_W, r); }
+    let rel = shape.map((s, i) => ({ s, semi: qual ? table[qual][i] : null }));
+    const inv = randInt(0, size - 1, r);
+    for (let i = 0; i < inv; i++) { const x = rel.shift(); rel.push({ s: x.s + 7, semi: x.semi == null ? null : x.semi + 12 }); }
+    const first = rel[0].s, last = rel[rel.length - 1].s;
+    const cands = [];
+    for (let d = lo - first; d + last <= hi; d++) if (((d % 7) + 7) % 7 === li) cands.push(d);
+    if (!cands.length) return null;
+    const dr = cands[randInt(0, cands.length - 1, r)];
+    const rootMidi = midiOf(fromDiat(dr, rootAcc));
+    return rel.map(x => { const n = fromDiat(dr + x.s, 0); n.role = (x.s % 7) / 2; if (x.semi != null) n.acc = rootMidi + x.semi - midiOf(n); return n; });
+  }
+
+  // opts: {clef: 'treble'|'bass'|'both', size: 1..4, ledger: bool, accidentals: bool}; avoid: previous card key
+  function makeCard(opts, r, avoid) {
+    for (let tries = 0; tries < 400; tries++) {
+      const clef = opts.clef === 'both' ? (r() < 0.5 ? 'treble' : 'bass') : opts.clef;
+      const [plo, phi] = opts.ledger ? RANGE.ledger : RANGE.staff;
+      const base = CLEF_BASE[clef];
+      const notes = generate(opts.size, base + plo, base + phi, opts.accidentals, r);
+      if (!notes || notes.some(n => !okSpelling(n))) continue;
+      notes.forEach(n => { n.midi = midiOf(n); n.p = n.d - base; });
+      notes.sort((a, b) => a.p - b.p);
+      let bad = false;
+      for (let i = 1; i < notes.length; i++) if (notes[i].midi <= notes[i - 1].midi) bad = true;
+      for (let i = 0; i < notes.length; i++) for (let j = i + 1; j < notes.length; j++) if ((notes[j].midi - notes[i].midi) % 12 === 0) bad = true;
+      if (bad) continue;
+      const key = clef + ':' + notes.map(n => n.midi).join(',');
+      if (key === avoid) continue;
+      const label = describe(notes);
+      if (notes.length > 1 && !label) continue; // skip exotic spellings (doubly augmented etc.)
+      return { clef, notes, key, flats: notes.some(n => n.acc < 0), label };
+    }
+    return null;
+  }
+
+  const QUAL_NAME = { maj: ' major', min: ' minor', dim: ' diminished', aug: ' augmented', maj7: 'maj7', dom7: '7', min7: 'm7', hdim7: 'm7♭5', dim7: '°7' };
+  const INV = ['root position', '1st inversion', '2nd inversion', '3rd inversion'];
+  const IVL = {
+    2: { 0: 'diminished 2nd', 1: 'minor 2nd', 2: 'major 2nd', 3: 'augmented 2nd' },
+    3: { 2: 'diminished 3rd', 3: 'minor 3rd', 4: 'major 3rd', 5: 'augmented 3rd' },
+    4: { 4: 'diminished 4th', 5: 'perfect 4th', 6: 'augmented 4th' },
+    5: { 6: 'diminished 5th', 7: 'perfect 5th', 8: 'augmented 5th' },
+    6: { 7: 'diminished 6th', 8: 'minor 6th', 9: 'major 6th', 10: 'augmented 6th' },
+    7: { 9: 'diminished 7th', 10: 'minor 7th', 11: 'major 7th' },
+  };
+  function describe(notes) {
+    if (notes.length === 1) return '';
+    if (notes.length === 2) {
+      const num = notes[1].d - notes[0].d + 1, semi = notes[1].midi - notes[0].midi;
+      return (IVL[num] && IVL[num][semi]) || '';
+    }
+    const root = notes.find(n => n.role === 0);
+    if (!root) return '';
+    const byRole = notes.slice().sort((a, b) => a.role - b.role).map(n => ((n.midi - root.midi) % 12 + 12) % 12);
+    const table = notes.length === 3 ? TRIADS : SEVENTHS;
+    let q = null;
+    for (const k in table) if (table[k].every((v, i) => v === byRole[i])) q = k;
+    if (!q) return '';
+    const rn = root.letter + (root.acc > 0 ? '♯' : root.acc < 0 ? '♭' : '');
+    return rn + QUAL_NAME[q] + ', ' + INV[notes[0].role];
+  }
+
+  const api = { describe, LETTERS, CLEF_BASE, RANGE, rng, makeCard, midiOf, name, midiName, fromDiat };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  else root.Theory = api;
+})(typeof self !== 'undefined' ? self : this);
+
+</script>
+<script>
+(function () {
+  'use strict';
+  const $ = (id) => document.getElementById(id);
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem('primavista:' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem('primavista:' + k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } },
+  };
+
+  // ---------------------------------------------------------------- settings
+  const DEFAULTS = { clef: 'treble', size: 1, ledger: false, accidentals: false, input: 'mic', hints: true };
+  const S = Object.assign({}, DEFAULTS, store.get('settings', {}));
+  if (!['treble', 'bass', 'both'].includes(S.clef)) S.clef = 'treble';
+  if (![1, 2, 3, 4].includes(S.size)) S.size = 1;
+  const midiSupported = typeof navigator.requestMIDIAccess === 'function';
+  if (!midiSupported) S.input = 'mic';
+  const qs = new URLSearchParams(location.search);
+  const rand = Theory.rng(qs.has('seed') ? (Number(qs.get('seed')) >>> 0) : ((Date.now() ^ Math.floor(Math.random() * 4294967296)) >>> 0));
+
+  const SIZE_NAME = { 1: 'Single notes', 2: 'Intervals', 3: 'Triads', 4: '7th chords' };
+  const CLEF_NAME = { treble: 'Treble', bass: 'Bass', both: 'Treble & bass' };
+
+  // ---------------------------------------------------------------- state
+  let card = null;
+  let listening = false;
+  const stats = { done: 0, first: 0, streak: 0, best: store.get('best', 0), times: [] };
+  const timers = {};
+
+  // ---------------------------------------------------------------- notation (SVG, 1 staff space = 10 units)
+  const HEAD_W = 16.88, ACC = { '-1': ['', 9.04], '1': ['', 9.96], '0': ['', 6.72] };
+  const yOf = (p) => (8 - p) * 5; // p: 0 = bottom line, 8 = top line
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function staffSVG(c, anim) {
+    const notes = c.notes.slice().sort((a, b) => a.p - b.p);
+    const el = notes.map((n) => ({ n, disp: false, col: 0 }));
+    for (let i = 1; i < el.length; i++) if (el[i].n.p - el[i - 1].n.p === 1 && !el[i - 1].disp) el[i].disp = true;
+    const accEls = el.filter((e) => e.n.acc !== 0).sort((a, b) => b.n.p - a.n.p);
+    const cols = [];
+    for (const e of accEls) { let k = 0; while (cols[k] && cols[k].some((q) => Math.abs(q - e.n.p) < 6)) k++; (cols[k] = cols[k] || []).push(e.n.p); e.col = k; }
+    const accSpan = cols.length ? cols.length * 11.2 + 2.6 : 0;
+    const anyDisp = el.some((e) => e.disp);
+    const headsSpan = HEAD_W * (anyDisp ? 2 : 1);
+    const nameSpan = c.names ? 28 : 0;
+    const regionL = 40, regionR = 138;
+    const x0 = regionL + Math.max(0, (regionR - regionL - (accSpan + headsSpan + nameSpan)) / 2);
+    const hx = x0 + accSpan;
+    const ledger = S.ledger || notes.some((n) => n.p < -1 || n.p > 9);
+    const top = ledger ? -40 : -24, bottom = ledger ? 80 : 64;
+    const state = (m) => (c.state === 'ok' ? ' ok' : c.state === 'bad' && c.bad.has(m) ? ' bad' : '');
+    let s = `<svg viewBox="0 ${top} 140 ${bottom - top}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
+    for (let i = 0; i < 5; i++) s += `<line class="line" x1="0" x2="140" y1="${i * 10}" y2="${i * 10}"/>`;
+    s += c.clef === 'treble'
+      ? `<text class="g" x="7" y="${yOf(2)}"></text>`
+      : `<text class="g" x="7" y="${yOf(6)}"></text>`;
+    s += `<g class="chord${anim ? ' enter' : ''}">`;
+    const ledgerLine = (q, cover) => {
+      if (!cover.length) return;
+      const xs = cover.map((e) => hx + (e.disp ? HEAD_W : 0));
+      const ok = c.state === 'ok' ? ' ok' : '';
+      s += `<line class="ledger${ok}" x1="${(Math.min(...xs) - 4).toFixed(1)}" x2="${(Math.max(...xs) + HEAD_W + 4).toFixed(1)}" y1="${yOf(q)}" y2="${yOf(q)}"/>`;
+    };
+    for (let q = -2; q >= notes[0].p; q -= 2) ledgerLine(q, el.filter((e) => e.n.p <= q));
+    for (let q = 10; q <= notes[notes.length - 1].p; q += 2) ledgerLine(q, el.filter((e) => e.n.p >= q));
+    for (const e of accEls) {
+      const [g, w] = ACC[e.n.acc];
+      s += `<text class="g acc${state(e.n.midi)}" x="${(hx - 2.6 - e.col * 11.2 - w).toFixed(1)}" y="${yOf(e.n.p)}">${g}</text>`;
+    }
+    for (const e of el) s += `<text class="g head${state(e.n.midi)}" data-midi="${e.n.midi}" x="${(hx + (e.disp ? HEAD_W : 0)).toFixed(1)}" y="${yOf(e.n.p)}"></text>`;
+    if (c.names) {
+      const lx = hx + headsSpan + 5;
+      const ys = el.map((e) => ({ y: yOf(e.n.p) + 3.4, t: Theory.name(e.n) })).sort((a, b) => b.y - a.y);
+      for (let i = 1; i < ys.length; i++) if (ys[i - 1].y - ys[i].y < 10.5) ys[i].y = ys[i - 1].y - 10.5;
+      for (const l of ys) s += `<text class="name" x="${lx.toFixed(1)}" y="${l.y.toFixed(1)}">${esc(l.t)}</text>`;
+    }
+    s += '</g></svg>';
+    return s;
+  }
+
+  function render(anim) {
+    if (!card) return;
+    $('staff').innerHTML = staffSVG(card, anim);
+    $('staff').setAttribute('aria-label', `${card.clef === 'treble' ? 'Treble' : 'Bass'} clef, ${card.notes.length === 1 ? 'one note' : card.notes.length + ' notes'}${card.names ? ': ' + card.notes.map(Theory.name).join(', ') : ''}`);
+    $('card').dataset.state = card.state;
+    $('misses').innerHTML = '<i></i>'.repeat(Math.min(card.misses, 5));
+    $('misses').setAttribute('aria-label', card.misses ? `${card.misses} miss${card.misses > 1 ? 'es' : ''} on this card` : '');
+    $('btnNames').textContent = card.names ? 'Hide names' : 'Show names';
+  }
+
+  function feedback(main, sub) { $('fbMain').textContent = main; $('fbSub').textContent = sub || ''; }
+  const restingPrompt = () => listening
+    ? [card.notes.length === 1 ? 'Play this note' : 'Play these notes together', card.notes.length > 1 ? 'Hold the keys until the notes turn green.' : '']
+    : ['Play what you see', 'Tap Start listening, then play this on your piano.'];
+
+  function modeLabel() {
+    const bits = [CLEF_NAME[S.clef], SIZE_NAME[S.size]];
+    if (S.ledger) bits.push('Ledger lines');
+    if (S.accidentals) bits.push('♯\u00a0♭');
+    $('mode').innerHTML = bits.map(esc).join(' <span>·</span> ');
+  }
+
+  // ---------------------------------------------------------------- flow
+  function newCard() {
+    clearTimeout(timers.next); clearTimeout(timers.calm);
+    const c = Theory.makeCard({ clef: S.clef, size: S.size, ledger: S.ledger, accidentals: S.accidentals }, rand, card ? card.key : null);
+    card = Object.assign(c, { shownAt: performance.now(), misses: 0, names: false, state: 'idle', bad: new Set(), solved: false });
+    input().setTarget(card.notes.map((n) => n.midi));
+    render(true);
+    feedback(...restingPrompt());
+  }
+
+  function onAttempt() { // a new key strike was heard
+    if (!card || card.solved) return;
+    if (card.state === 'bad') { clearTimeout(timers.calm); card.state = 'idle'; card.bad.clear(); render(false); }
+    feedback('Listening…', '');
+  }
+
+  function onVerdict(ev) {
+    if (!card || card.solved) return;
+    if (ev.type === 'correct') {
+      card.solved = true; card.state = 'ok'; card.bad.clear();
+      const firstTry = card.misses === 0 && !card.names;
+      stats.done++;
+      if (firstTry) {
+        stats.first++; stats.streak++;
+        stats.times.push((performance.now() - card.shownAt) / 1000); if (stats.times.length > 30) stats.times.shift();
+        if (stats.streak > stats.best) { stats.best = stats.streak; store.set('best', stats.best); }
+      } else stats.streak = 0;
+      render(false);
+      const names = card.notes.map(Theory.name).join(' · ');
+      feedback(card.notes.length === 1 ? `Yes, ${names}` : `Yes, ${card.label || names}`, card.notes.length === 1 ? (firstTry ? '' : 'Got it.') : names);
+      saveTuning(); showStats();
+      timers.next = setTimeout(newCard, 950);
+    } else {
+      card.misses++; card.state = 'bad'; stats.streak = 0;
+      const targets = card.notes.map((n) => n.midi);
+      const missing = (ev.missing || []).filter((m) => targets.includes(m));
+      const extra = ev.extra || [];
+      card.bad = new Set(missing.length ? missing : targets);
+      if (S.hints && card.misses >= 2) card.names = true;
+      render(false);
+      const heard = extra.map((m) => Theory.midiName(m, card.flats)).join(', ');
+      let sub = '';
+      if (targets.length === 1 && extra.length) sub = `You played ${heard}.`;
+      else if (extra.length && missing.length) sub = `You played ${heard}. The red note${missing.length > 1 ? 's are' : ' is'} still missing.`;
+      else if (extra.length) sub = `You also played ${heard}.`;
+      else if (missing.length && missing.length < targets.length) sub = `Missing the note${missing.length > 1 ? 's' : ''} in red.`;
+      else sub = 'That wasn’t it. Try again.';
+      feedback('Not quite', sub);
+      showStats();
+      clearTimeout(timers.calm);
+      timers.calm = setTimeout(() => {
+        if (card && !card.solved && card.state === 'bad') { card.state = 'idle'; card.bad.clear(); render(false); feedback('Try again', card.names ? 'The note names are shown now.' : ''); }
+      }, 2600);
+    }
+  }
+
+  function showStats() {
+    $('stStreak').textContent = stats.streak;
+    $('stFirst').textContent = stats.done ? Math.round((100 * stats.first) / stats.done) + '%' : '–';
+    const t = stats.times;
+    $('stTime').textContent = t.length ? (t.reduce((a, b) => a + b, 0) / t.length).toFixed(1) + ' s' : '–';
+    $('stBest').textContent = stats.best;
+    $('bestOut').textContent = stats.best;
+  }
+
+  // ---------------------------------------------------------------- microphone input
+  const Mic = {
+    ctx: null, an: null, buf: null, stream: null, timer: 0, judge: null, target: null,
+    async start() {
+      if (!window.isSecureContext) throw Object.assign(new Error('insecure'), { code: 'insecure' });
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) throw Object.assign(new Error('unsupported'), { code: 'unsupported' });
+      const AC = window.AudioContext || window.webkitAudioContext;
+      const ctx = new AC();
+      const resumed = ctx.resume().catch(() => {});
+      let stream;
+      try {
+        stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+      } catch (e) { ctx.close().catch(() => {}); throw e; }
+      await resumed;
+      const src = ctx.createMediaStreamSource(stream);
+      const an = ctx.createAnalyser(); an.fftSize = 32768; an.smoothingTimeConstant = 0;
+      const sink = ctx.createGain(); sink.gain.value = 0;
+      src.connect(an); an.connect(sink); sink.connect(ctx.destination);
+      Object.assign(this, { ctx, an, stream, buf: new Float32Array(an.fftSize) });
+      this.judge = PitchCore.createJudge({ sampleRate: ctx.sampleRate, minMidi: 29, maxMidi: 92 });
+      this.judge.state.tuneHist = store.get('tune', []);
+      if (this.target) this.judge.setTarget(this.target);
+      stream.getAudioTracks().forEach((t) => t.addEventListener('ended', () => { if (listening) stopListening('The microphone stopped. Tap Start listening to continue.'); }));
+      this.timer = setInterval(() => this.tick(), 40);
+    },
+    tick() {
+      const ctx = this.ctx;
+      if (!ctx) return;
+      if (ctx.state !== 'running') { pill('paused', 'Tap to resume'); return; }
+      this.an.getFloatTimeDomainData(this.buf);
+      let r;
+      try { r = this.judge.process(this.buf, ctx.currentTime); } catch (e) { console.error(e); return; }
+      if ($('pill').dataset.state !== 'on') pill('on', 'Listening');
+      meter(r.level, r.gate);
+      if (r.onset) onAttempt();
+      if (r.event) onVerdict(r.event);
+    },
+    setTarget(m) { this.target = m; if (this.judge) this.judge.setTarget(m); },
+    resume() { if (this.ctx && this.ctx.state !== 'running') this.ctx.resume().catch(() => {}); },
+    stop() {
+      clearInterval(this.timer);
+      if (this.stream) this.stream.getTracks().forEach((t) => t.stop());
+      if (this.ctx) this.ctx.close().catch(() => {});
+      Object.assign(this, { ctx: null, an: null, stream: null, judge: null });
+    },
+  };
+
+  // ---------------------------------------------------------------- MIDI keyboard input
+  const Midi = {
+    access: null, held: new Set(), pressed: new Set(), decided: false, target: null, t1: 0, t2: 0,
+    async start() {
+      if (!midiSupported) throw Object.assign(new Error('nomidi'), { code: 'nomidi' });
+      this.access = await navigator.requestMIDIAccess();
+      this.bind();
+      this.access.onstatechange = () => this.bind();
+    },
+    bind() {
+      const names = [];
+      for (const inp of this.access.inputs.values()) { inp.onmidimessage = (e) => this.msg(e); names.push(inp.name); }
+      if (listening && S.input === 'midi') pill(names.length ? 'on' : 'error', names.length ? 'MIDI on' : 'No keyboard');
+      if (listening && S.input === 'midi') note(names.length ? `Connected: ${names.join(', ')}` : 'No MIDI keyboard found. Connect your digital piano by USB.', !names.length);
+    },
+    msg(e) {
+      const [st, n, v] = e.data; const cmd = st & 0xf0;
+      if (cmd === 0x90 && v > 0) this.down(n);
+      else if (cmd === 0x80 || (cmd === 0x90 && v === 0)) this.up(n);
+    },
+    down(n) {
+      if (!this.held.size) { this.pressed.clear(); this.decided = false; }
+      this.held.add(n); this.pressed.add(n);
+      meterPulse(); onAttempt();
+      clearTimeout(this.t1); this.t1 = setTimeout(() => this.check(false), 140);
+    },
+    up(n) { this.held.delete(n); if (!this.held.size && !this.decided) this.check(true); },
+    check(final) {
+      if (!this.target || this.decided) return;
+      const T = this.target, P = final ? this.pressed : this.held;
+      const same = (A) => A.size === T.length && T.every((m) => A.has(m));
+      const wrong = (A) => ({ type: 'wrong', missing: T.filter((m) => !A.has(m)), extra: [...A].filter((m) => !T.includes(m)) });
+      if (same(P)) { this.decided = true; onVerdict({ type: 'correct' }); return; }
+      if (final) { if (P.size) { this.decided = true; onVerdict(wrong(P)); } return; }
+      if (P.size >= T.length) {
+        clearTimeout(this.t2);
+        this.t2 = setTimeout(() => { if (!this.decided && this.held.size >= T.length && !same(this.held)) { this.decided = true; onVerdict(wrong(this.held)); } }, 450);
+      }
+    },
+    setTarget(m) { this.target = m; this.decided = false; this.pressed.clear(); },
+    resume() {},
+    stop() { if (this.access) { for (const inp of this.access.inputs.values()) inp.onmidimessage = null; this.access.onstatechange = null; } this.access = null; this.held.clear(); },
+  };
+  const input = () => (S.input === 'midi' ? Midi : Mic);
+
+  // ---------------------------------------------------------------- status UI
+  function pill(state, text) { $('pill').dataset.state = state; $('pillText').textContent = text; }
+  const bars = Array.from(document.querySelectorAll('.meter i'));
+  function meter(level, gate) {
+    const db = level > 0 && gate > 0 ? 20 * Math.log10(level / gate) : -99;
+    const lit = Math.max(0, Math.min(5, Math.floor((db + 3) / 5)));
+    bars.forEach((b, i) => b.classList.toggle('lit', i < lit));
+  }
+  function meterPulse() { meter(1, 0.01); clearTimeout(timers.pulse); timers.pulse = setTimeout(() => meter(0, 1), 160); }
+  function note(text, isErr) { $('note').textContent = text; $('note').classList.toggle('err', !!isErr); }
+  const DEFAULT_NOTE = 'Listening uses your microphone. Sound is analyzed on this device and is never recorded or uploaded.';
+
+  let wakeLock = null;
+  async function keepAwake() { try { if (navigator.wakeLock && document.visibilityState === 'visible') wakeLock = await navigator.wakeLock.request('screen'); } catch (e) { /* not available */ } }
+
+  async function startListening() {
+    $('btnListen').disabled = true;
+    note(S.input === 'midi' ? 'Connecting to your keyboard…' : 'Waiting for microphone permission…');
+    try {
+      await input().start();
+      listening = true;
+      $('btnListen').textContent = 'Pause';
+      $('btnListen').classList.remove('primary');
+      if (S.input === 'mic') { pill('on', 'Listening'); note(DEFAULT_NOTE); }
+      else Midi.bind();
+      if (card) { card.shownAt = performance.now(); input().setTarget(card.notes.map((n) => n.midi)); if (!card.solved && card.state !== 'bad') feedback(...restingPrompt()); }
+      keepAwake();
+    } catch (e) {
+      listening = false;
+      input().stop();
+      pill('off', S.input === 'midi' ? 'MIDI off' : 'Mic off');
+      note(explain(e), true);
+    } finally { $('btnListen').disabled = false; }
+  }
+
+  function stopListening(msg) {
+    input().stop();
+    listening = false;
+    $('btnListen').textContent = 'Start listening';
+    $('btnListen').classList.add('primary');
+    pill('off', S.input === 'midi' ? 'MIDI off' : 'Mic off'); meter(0, 1);
+    note(msg || DEFAULT_NOTE, !!msg);
+    if (wakeLock) { wakeLock.release().catch(() => {}); wakeLock = null; }
+    if (card && !card.solved && card.state !== 'bad') feedback(...restingPrompt());
+  }
+
+  function explain(e) {
+    const code = e && (e.code || e.name);
+    if (code === 'insecure') return 'The microphone only works on secure pages. Open the app from its https:// address.';
+    if (code === 'unsupported') return 'This browser can’t use the microphone. Try Safari or Chrome.';
+    if (code === 'NotAllowedError' || code === 'SecurityError' || code === 'PermissionDeniedError') return S.input === 'midi' ? 'MIDI access was blocked. Allow it in your browser’s site settings, then try again.' : 'Microphone access is blocked. Allow the microphone for this site in your browser settings, then tap Start listening.';
+    if (code === 'NotFoundError' || code === 'DevicesNotFoundError') return 'No microphone was found on this device.';
+    if (code === 'NotReadableError') return 'Another app is using the microphone. Close it, then tap Start listening.';
+    if (code === 'nomidi') return 'This browser can’t use MIDI keyboards. Use Chrome on Android or a computer, or switch to Microphone.';
+    return 'Couldn’t start listening (' + (e && e.message ? e.message : 'unknown error') + ').';
+  }
+
+  // ---------------------------------------------------------------- tuning
+  function saveTuning() { if (Mic.judge) store.set('tune', Mic.judge.state.tuneHist); showTuning(); }
+  function showTuning() {
+    const hist = Mic.judge ? Mic.judge.state.tuneHist : store.get('tune', []);
+    if (!hist || hist.length < 3) { $('tuneOut').textContent = 'Not measured yet'; return; }
+    const off = PitchCore.tuneFromHist(hist, 69);
+    const cents = Math.round(off * 100);
+    $('tuneOut').textContent = `A4 = ${(440 * Math.pow(2, off / 12)).toFixed(1)} Hz (${cents > 0 ? '+' : cents < 0 ? '−' : '±'}${Math.abs(cents)} cents)`;
+  }
+
+  // ---------------------------------------------------------------- settings sheet
+  function syncSheet() {
+    $('clef-' + S.clef).checked = true;
+    $('size-' + S.size).checked = true;
+    $('ledger-' + (S.ledger ? 1 : 0)).checked = true;
+    $('acc-' + (S.accidentals ? 1 : 0)).checked = true;
+    $('input-' + S.input).checked = true;
+    $('optHints').checked = !!S.hints;
+    $('inputGroup').hidden = !midiSupported;
+    showTuning(); showStats();
+  }
+  $('sheet').addEventListener('change', (e) => {
+    const t = e.target;
+    const before = JSON.stringify([S.clef, S.size, S.ledger, S.accidentals]);
+    if (t.name === 'clef') S.clef = t.value;
+    if (t.name === 'size') S.size = Number(t.value);
+    if (t.name === 'ledger') S.ledger = t.value === '1';
+    if (t.name === 'acc') S.accidentals = t.value === '1';
+    if (t.id === 'optHints') S.hints = t.checked;
+    if (t.name === 'input' && t.value !== S.input) {
+      const was = listening;
+      if (was) stopListening();
+      S.input = t.value;
+      pill('off', S.input === 'midi' ? 'MIDI off' : 'Mic off');
+      if (card) input().setTarget(card.notes.map((n) => n.midi));
+      if (was) startListening();
+    }
+    store.set('settings', S);
+    modeLabel();
+    if (JSON.stringify([S.clef, S.size, S.ledger, S.accidentals]) !== before) newCard();
+  });
+  const openSheet = () => { syncSheet(); try { $('sheet').showModal(); } catch (e) { $('sheet').setAttribute('open', ''); } };
+  const closeSheet = () => { try { $('sheet').close(); } catch (e) { $('sheet').removeAttribute('open'); } };
+  $('btnSettings').addEventListener('click', openSheet);
+  $('mode').addEventListener('click', openSheet);
+  $('btnDone').addEventListener('click', closeSheet);
+  $('sheet').addEventListener('click', (e) => { if (e.target === $('sheet')) closeSheet(); });
+  let resetArmed = 0;
+  $('btnReset').addEventListener('click', () => {
+    if (Date.now() - resetArmed > 3000) { resetArmed = Date.now(); $('btnReset').textContent = 'Tap again to reset'; setTimeout(() => { $('btnReset').textContent = 'Reset stats'; }, 3000); return; }
+    Object.assign(stats, { done: 0, first: 0, streak: 0, best: 0, times: [] }); store.set('best', 0);
+    $('btnReset').textContent = 'Stats cleared'; resetArmed = 0; showStats();
+  });
+
+  // ---------------------------------------------------------------- controls
+  $('btnListen').addEventListener('click', () => (listening ? stopListening() : startListening()));
+  $('btnSkip').addEventListener('click', () => { if (card && !card.solved) stats.streak = 0; showStats(); newCard(); });
+  $('btnNames').addEventListener('click', () => { if (!card) return; card.names = !card.names; render(false); });
+  $('pill').addEventListener('click', () => { if (listening) { input().resume(); keepAwake(); } });
+  document.addEventListener('keydown', (e) => {
+    if ($('sheet').open || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === 'ArrowRight' || e.key === 's') $('btnSkip').click();
+    else if (e.key === 'n') $('btnNames').click();
+    else if (e.key === 'l') $('btnListen').click();
+  });
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible' && listening) { input().resume(); keepAwake(); }
+  });
+
+  // ---------------------------------------------------------------- boot
+  modeLabel(); showStats(); showTuning();
+  pill('off', S.input === 'midi' ? 'MIDI off' : 'Mic off');
+  const boot = () => { if (!card) newCard(); };
+  if (document.fonts && document.fonts.load) {
+    Promise.race([document.fonts.load("40px 'PrimaVista Glyphs'", ''), new Promise((r) => setTimeout(r, 1500))]).then(boot, boot);
+  } else boot();
+  window.__pv = { get card() { return card; }, stats, S, Mic, Midi, onVerdict }; // for testing
+})();
+</script>
+</body>
+</html>
